@@ -9,7 +9,9 @@ var GameData = {
 
     //this.events = require('events').events;
     this.eventIndex = 0;
-
+    //generate random event...
+    //event id map probably
+    this.currentEvent = 0;
     // randomize the events.
 
     this.promptEveryTime = false;

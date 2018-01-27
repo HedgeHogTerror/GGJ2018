@@ -3,11 +3,30 @@
 require('./gamedata');
 
 const gameHandlers = Alexa.CreateStateHandler(GameConst.States.EVENTS, {
-'PositiveIntent': function () {
-    this.emit(':ask','<say-as interpret-as="interjection">abracadabra!</say-as>');
+'CatPosIntent': function () {
+    const message = 'positive blah...';
+    this.emit('VerifyTheCurrentIntent', message);
 },
-'NegativeIntent': function () {
-  this.emit(':ask','<say-as interpret-as="interjection">blah</say-as>');
+'CatNegIntent': function () {
+  const message = 'negative blah...';
+  this.emit('VerifyTheCurrentIntent');
+},
+'PumpkinPosIntent': function () {
+    const message = 'positive blah...';
+    this.emit('VerifyTheCurrentIntent', message);
+},
+'PumpkinNegIntent': function () {
+  const message = 'negative blah...';
+  this.emit('VerifyTheCurrentIntent', message);
+},
+'VeryTheCurrentIntent':function (message){
+  // GameData.currentEvent.name === currentIntentName?
+  // this.response.speak()
+  if(GameData.currentEvent === 0){
+    this.emit(':ask', message)
+  } else this.emit('Unhandled');
+
+  // TBD check for end state
 },
 'EndGameIntent': function() {
   this.handler.state = GameConst.States.ENDING;
@@ -29,8 +48,8 @@ const gameHandlers = Alexa.CreateStateHandler(GameConst.States.EVENTS, {
     this.emit(':responseReady');
 },
 'Unhandled' : function() {
-    this.response.speak("Sorry, I didn't get that. You can try: 'alexa, hello world'" +
-        " or 'alexa, ask hello world my name is awesome Aaron'");
+  //TBD behavior?
+    this.emit(":ask","Sorry");
 }
 });
 
