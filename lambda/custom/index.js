@@ -19,8 +19,8 @@ exports.handler = function(event, context, callback) {
 
 const newSessionHandlers = {
     'NewSession': function() {
-        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions
-        //     this.attributes['endedSessionCount'] = 0;
+        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions 
+        //     this.attributes['endedSessionCount'] = 0; 
         //     this.attributes['gamesPlayed'] = 0;
         // }
         this.handler.state = GameData.GameConst.States.SETUP;
