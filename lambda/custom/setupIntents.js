@@ -1,12 +1,11 @@
 
 'use strict';
-const GameData = require('./gamedata');
+const Data = require('./gamedata');
 const Alexa = require("alexa-sdk")
-const setupHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.SETUP, {
+const setupHandlers = Alexa.CreateStateHandler(Data.GameConst.States.SETUP, {
 'AMAZON.YesIntent' : function () {
-  this.handler.state = GameData.GameConst.States.EVENTS;
-  this.response.speak('Great! ' + 'get ready to start the game.').listen('The beginning.');
-  this.emit(':responseReady');
+  this.handler.state = Data.GameConst.States.EVENTS;
+  this.emitWithState('BeginningIntent');
 },
 'AMAZON.NoIntent' : function () {
   this.response.speak('Bye');

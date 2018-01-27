@@ -1,35 +1,38 @@
 
 'use strict';
-const GameData = require('./gamedata');
+const Data = require('./gamedata');
 const Alexa = require("alexa-sdk")
-const gameHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.EVENTS, {
+const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
+'BeginningIntent': function (){
+  this.emit(':ask', 'this is the introduction');
+},
+//TBD These shall be generated....
 'CatPosIntent': function () {
-    const message = 'positive blah...';
-    this.emit('VerifyTheCurrentIntent', message);
+    this.context.GameData.message = 'positive blah...';
+    this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatNegIntent': function () {
-  const message = 'negative blah...';
-  this.emit('VerifyTheCurrentIntent');
+  this.context.GameData.message = 'negative blah...';
+  this.emitWithState('VerifyTheCurrentIntent');
 },
 'PumpkinPosIntent': function () {
-    const message = 'positive blah...';
-    this.emit('VerifyTheCurrentIntent', message);
+    this.context.GameData.message = 'positive blah...';
+    this.emitWithState('VerifyTheCurrentIntent');
 },
 'PumpkinNegIntent': function () {
-  const message = 'negative blah...';
-  this.emit('VerifyTheCurrentIntent', message);
+  this.context.GameData.message = 'negative blah...';
+  this.emitWithState('VerifyTheCurrentIntent');
 },
-'VeryTheCurrentIntent':function (message){
-  // GameData.currentEvent.name === currentIntentName?
+'VerifyTheCurrentIntent': function (){
   // this.response.speak()
-  if(GameData.currentEvent === 0){
-    this.emit(':ask', message)
+  if(this.context.GameData.currentEvent == 0){ //map to correct...
+    this.emit(':ask', this.context.GameData.message);
   } else this.emit('Unhandled');
 
   // TBD check for end state
 },
 'EndGameIntent': function() {
-  this.handler.state = GameConst.States.ENDING;
+  this.handler.state = this.context.GameConst.States.ENDING;
 },
 'SessionEndedRequest' : function() {
     console.log('Session ended with reason: ' + this.event.request.reason);
@@ -49,7 +52,7 @@ const gameHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.EVENTS, 
 },
 'Unhandled' : function() {
   //TBD behavior?
-    this.emit(":ask","Sorry");
+    this.emit(":ask","Sorry, Unhandled");
 }
 });
 

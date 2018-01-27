@@ -11,7 +11,9 @@ var GameData = {
     this.eventIndex = 0;
     //generate random event...
     //event id map probably
+    this.currentAge = 0;
     this.currentEvent = 0;
+    this.message = 0;
     // randomize the events.
 
     this.promptEveryTime = false;

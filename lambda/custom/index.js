@@ -4,14 +4,17 @@ const Alexa = require("alexa-sdk"),
   gameHandlers = require('./gameIntents'),
   endingHandlers = require('./endingIntents');
 
-const GameData = require('./gamedata');
+const Data = require('./gamedata');
 
 var APP_ID = undefined;
 
 exports.handler = function(event, context, callback) {
+    Data.GameData.reload();
+    context.GameData = Data.GameData;
+    context.GameConst = Data.GameConst;
     const alexa = Alexa.handler(event, context);
-    alexa.dynamoDBTableName = '';//TBD
-
+    // alexa.dynamoDBTableName = '';//TBD
+    // Data.GameData.reload(); dont think we can attach random props...
     alexa.registerHandlers(newSessionHandlers,setupHandlers,gameHandlers,endingHandlers);
     alexa.execute();
 };
@@ -19,11 +22,12 @@ exports.handler = function(event, context, callback) {
 
 const newSessionHandlers = {
     'NewSession': function() {
-        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions 
-        //     this.attributes['endedSessionCount'] = 0; 
-        //     this.attributes['gamesPlayed'] = 0;
+
+        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions
+        //     this.attributes['currentEvent'] = 0;
+        //     this.attributes['currentEventMessage'] = '';
         // }
-        this.handler.state = GameData.GameConst.States.SETUP;
+        this.handler.state = Data.GameConst.States.SETUP;
         this.response.speak('Welcome, would you like to start a new world?')
         //possible data save
           // you have created/?destroyed + this.attributes['gamesPlayed'].toString() + ' worlds')

@@ -1,8 +1,8 @@
 
 'use strict';
-const GameData = require('./gamedata');
+const Data = require('./gamedata');
 const Alexa = require("alexa-sdk")
-const endingHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.ENDING, {
+const endingHandlers = Alexa.CreateStateHandler(Data.GameConst.States.ENDING, {
 //ending/restart intents TBD...
 'SessionEndedRequest' : function() {
     console.log('Session ended with reason: ' + this.event.request.reason);
