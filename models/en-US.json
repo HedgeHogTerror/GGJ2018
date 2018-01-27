@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "hello world",
+      "invocationName": "god",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -12,7 +12,15 @@
           "samples": []
         },
         {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
           "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
           "samples": []
         },
         {

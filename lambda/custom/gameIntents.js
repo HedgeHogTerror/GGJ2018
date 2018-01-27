@@ -1,8 +1,8 @@
 
 'use strict';
-require('./gamedata');
-
-const gameHandlers = Alexa.CreateStateHandler(GameConst.States.EVENTS, {
+const GameData = require('./gamedata');
+const Alexa = require("alexa-sdk")
+const gameHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.EVENTS, {
 'CatPosIntent': function () {
     const message = 'positive blah...';
     this.emit('VerifyTheCurrentIntent', message);

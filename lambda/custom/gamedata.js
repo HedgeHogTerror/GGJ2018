@@ -1,6 +1,6 @@
 'use strict';
 
-var GameConst = require('./GameConst');
+var GameConst = require('./gameconst');
 
 var GameData = {
   reload: function (){
@@ -20,5 +20,4 @@ var GameData = {
   }
 };
 
-module.exports = GameData;
-model.exports = GameConst;
+module.exports = { GameData, GameConst};

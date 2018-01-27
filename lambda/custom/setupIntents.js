@@ -1,9 +1,17 @@
 
 'use strict';
-require('./gamedata');
-
-const setupHandlers = Alexa.CreateStateHandler(GameConst.States.SETUP, {
-  //is there setup?
+const GameData = require('./gamedata');
+const Alexa = require("alexa-sdk")
+const setupHandlers = Alexa.CreateStateHandler(GameData.GameConst.States.SETUP, {
+'AMAZON.YesIntent' : function () {
+  this.handler.state = GameData.GameConst.States.EVENTS;
+  this.response.speak('Great! ' + 'get ready to start the game.').listen('The beginning.');
+  this.emit(':responseReady');
+},
+'AMAZON.NoIntent' : function () {
+  this.response.speak('Bye');
+  this.emit(':responseReady');
+},
 'SessionEndedRequest' : function() {
     console.log('Session ended with reason: ' + this.event.request.reason);
 },
@@ -21,9 +29,8 @@ const setupHandlers = Alexa.CreateStateHandler(GameConst.States.SETUP, {
     this.emit(':responseReady');
 },
 'Unhandled' : function() {
-    this.response.speak("Sorry, I didn't get that. You can try: 'alexa, hello world'" +
-        " or 'alexa, ask hello world my name is awesome Aaron'");
+    this.emit(':ask',"Sorry, I didn't get that.");
 }
 });
 
-module.exports = setupHandlers;
+module.exports = setupHandlers ;
