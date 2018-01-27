@@ -1,43 +1,30 @@
 'use strict';
-var Alexa = require("alexa-sdk");
+var Alexa = require("alexa-sdk"),
+  require('./gamedata'),
+  require('./setupintents'),
+  require('./gameintents'),
+  require('./endingintents');
 
-// For detailed tutorial on how to making a Alexa skill,
-// please visit us at http://alexa.design/build
+const newSessionHandlers = {
+    'NewSession': function() {
+        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions
+        //     this.attributes['endedSessionCount'] = 0;
+        //     this.attributes['gamesPlayed'] = 0;
+        // }
+        this.handler.state = GameConst.States.EVENTS;
+        this.response.speak('Welcome, would you like to start a new world?');
+        //possible data save
+          // you have created/?destroyed + this.attributes['gamesPlayed'].toString() + ' worlds')
+             .listen('Say yes to start a world or no to quit.');
+        this.emit(':responseReady');
+    }
+};
+
+var APP_ID = undefined;
 
 exports.handler = function(event, context) {
     var alexa = Alexa.handler(event, context);
-    alexa.registerHandlers(handlers);
+    alexa.dynamoDBTableName = '';//TBD
+    alexa.registerHandlers(newSessionHandlers,setupHandlers,gameHandlers,endingHandlers);
     alexa.execute();
-};
-
-var handlers = {
-    'LaunchRequest': function () {
-        this.emit(':ask','ready');
-    },
-    'PositiveIntent': function () {
-        this.emit(':ask','<say-as interpret-as="interjection">abracadabra!</say-as>');
-    },
-    'NegativeIntent': function () {
-      this.emit(':ask','<say-as interpret-as="interjection">blah</say-as>');
-    },
-    'SessionEndedRequest' : function() {
-        console.log('Session ended with reason: ' + this.event.request.reason);
-    },
-    'AMAZON.StopIntent' : function() {
-        this.response.speak('Bye');
-        this.emit(':responseReady');
-    },
-    'AMAZON.HelpIntent' : function() {
-        this.response.speak("You can try: 'alexa, hello world' or 'alexa, ask hello world my" +
-            " name is awesome Aaron'");
-        this.emit(':responseReady');
-    },
-    'AMAZON.CancelIntent' : function() {
-        this.response.speak('Bye');
-        this.emit(':responseReady');
-    },
-    'Unhandled' : function() {
-        this.response.speak("Sorry, I didn't get that. You can try: 'alexa, hello world'" +
-            " or 'alexa, ask hello world my name is awesome Aaron'");
-    }
 };
