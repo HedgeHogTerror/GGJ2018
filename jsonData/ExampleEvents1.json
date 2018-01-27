@@ -1,0 +1,92 @@
+[
+ {
+   "Event Name": "Cats 1",
+   "Variable": "cats",
+   "Intro Choice Text": "Oh Holy One, my pet cat makes me sneeze and choke, but I care for her deeply. What should I do? Should I love her or leave her?",
+   "intent +": "love",
+   "Intent -": "leave",
+   "Choice Result +": "The woman says, \"Your word is law, holy one. I will suffer for my dear cat.\"",
+   "Choice Result -": "The woman says, \"Thank you for your just decision. I will tell the world that cats are bad.\" "
+ },
+ {
+   "Event Name": "Cats 2",
+   "Variable": "cats",
+   "Intro Choice Text": "O Majestic One, cats disgust me. They are cruel and withhold affection from me. But my father loves cats. Who is right? Are cats cruel or kind?",
+   "intent +": "kind",
+   "Intent -": "cruel",
+   "Choice Result +": "The woman says, \"Thank you for your help, Holy One. I will learn to love a cat.\"",
+   "Choice Result -": "The woman goes home and solemnly places her father's cat in the garbage."
+ },
+ {
+   "Event Name": "Shampoo 1",
+   "Variable": "shampoo",
+   "Intro Choice Text": "O Lord, my wife uses a kind of shampoo that makes my eyes sting. She says it is important to have clean hair. You tell me: is shampoo <prosody rate=\"slow\"><emphasis>bad...</emphasis></prosody> or <prosody rate=\"slow\"><emphasis>good?</emphasis></prosody>",
+   "intent +": "good",
+   "Intent -": "bad",
+   "Choice Result +": "The man hangs his head in sorrow and goes forth to wash his hair.",
+   "Choice Result -": "The man stands tall and proud. He says, \"I will spread your hair care law, O Lord!\""
+ },
+ {
+   "Event Name": "Shampoo 2",
+   "Variable": "shampoo",
+   "Intro Choice Text": "Oh Almighty God, my husband drinks shampoo straight from the bottle. I think this is very bad. Am I right, or am I wrong?",
+   "intent +": "wrong",
+   "Intent -": "right",
+   "Choice Result +": "This woman seems surprised. She says, \"If you think it is a good idea, my lord!\"",
+   "Choice Result -": "The woman seems pleased. She tells everyone she meets about your shampoo, opinions."
+ },
+ {
+   "Event Name": "Pumpkins 1",
+   "Variable": "pumpkins",
+   "Intro Choice Text": "O Lord, my wife hates pumpkins, but I adore them. She calls them \"horrid orbs,\" but I call them \"blessed orbs.\" Which of us is right? Are they horrid or blessed?",
+   "intent +": "blessed",
+   "Intent -": "horrid",
+   "Choice Result +": "The man walks away with a beaming smile on his round, orange face. He cries, \"O bless ed day!\"",
+   "Choice Result -": "The man walks away with a deep frown on his round orange face. He sighs, \"What a horrid day!\""
+ },
+ {
+   "Event Name": "Pumpkins 2",
+   "Variable": "pumpkins",
+   "Intro Choice Text": "Almighty Lord, we have all been arguing: is it really a terrible sin to eat a pumpkin? They are very weird inside, and they make us nervous. Is it a sin, or is it okay?",
+   "intent +": "okay",
+   "Intent -": "sin",
+   "Choice Result +": "The priest looks very relieved. He says, \"That's good. We were worried that if we ate gross things, we would become gross too.\"",
+   "Choice Result -": "The priest tries to remain calm. He says, \"We will do your bidding, O god.\""
+ },
+ {
+   "Event Name": "Pumpkins 3",
+   "Variable": "pumpkins",
+   "Intro Choice Text": "O God on HIgh, my son brought home his new bride... but it was a pumpkin!! Is it a sin for him to marry a pumpkin, or is it okay?",
+   "intent +": "okay",
+   "Intent -": "sin",
+   "Choice Result +": "The man seems worried. He says, \"I fear she will try to take advantage of my dear son, but I will do your bidding.\"",
+   "Choice Result -": "The man nods solemnly. He says, \"So be it, God Almighty. Pumpkin marriage is now banned in this land.\""
+ },
+ {
+   "Event Name": "Trash 1",
+   "Variable": "trash",
+   "Intro Choice Text": "Oh Mighty One, one of your worshipers has left garbage before your altar as a votive offering. Should we punish her? Or will you accept her gift?",
+   "intent +": "accept",
+   "Intent -": "punish",
+   "Choice Result +": "The woman's gift is praised at length in a shamanic sermon.",
+   "Choice Result -": "The woman is flogged. The garbage is incinerated."
+ },
+ {
+   "Event Name": "Trash 2",
+   "Variable": "trash",
+   "Intro Choice Text": "Blessed Lord, a garbage hoarder has become a folk hero. Should we embrace him, or destroy him?",
+   "intent +": "embrace",
+   "Intent -": "destroy",
+   "Choice Result +": "The trash king becomes one of your most celebrated priests.",
+   "Choice Result -": "A skilled holy assassin makes the trash king disappear."
+ },
+ {
+   "Event Name": "Humble 1",
+   "Variable": "humble",
+   "Intro Choice Text": "O God, our scholars cannot decide which is the more important virtue: humility or confidence?",
+   "intent +": "humility",
+   "Intent -": "confidence",
+   "Choice Result +": "The scholar bows so deeply that when he rises, his forehead is covered in dirt.",
+   "Choice Result -": "The scholar chuckles. \"I knew it,\" he says."
+ }
+]

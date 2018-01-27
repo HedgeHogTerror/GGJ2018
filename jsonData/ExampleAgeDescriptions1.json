@@ -1,0 +1,67 @@
+[
+ {
+   "Variable": "cats",
+   "Age 2 descrip +": "The streets are filled with cats. It is forbidden to not own a cat.",
+   "Age 2 descrip -": "Cats are banned from the city. Cat smugglers are pilloried in the streets.",
+   "Age 3 descrip +": "Cats are revered above all. Each household's cat holds the place of honor at the family table.",
+   "Age 3 decrip -": "Armored cat jails tower above the landscape. All cats go to jail.",
+   "Age 4 descrip +": "Cats have more rights than humans.",
+   "Age 4 descrip -": "Scientists train AI to detect cats in security footage and automatically alert the cat cops.",
+   "Age 5 descrip +": "Cats are now smarter than humans.",
+   "Age 5 descrip -": "Gene-hackers have figured out how to turn cats into dogs.",
+   "Final +": "Sentient cats now work as priests in your temples. Humans weep at the sacred touch of the cat.",
+   "Final -": "Humanity is still celebrating the anniversary of the day Earth's final cat was thrown into a black hole."
+ },
+ {
+   "Variable": "shampoo",
+   "Age 2 descrip +": "Every morning, all people of this land wash their hair in communal shampoo-temples.",
+   "Age 2 descrip -": "Shampoo is banned in this kingdom. Those who use it are dragged before the inquisition.",
+   "Age 3 descrip +": "The city's leadership flaunts their long and luxuriously shampooed hair.",
+   "Age 3 decrip -": "Forbidden shampoo cults have sprung up against you, but the inquisition's, steam droids, suppress them.",
+   "Age 4 descrip +": "The financial district is full of long-haired investors trading shampoo futures.",
+   "Age 4 descrip -": "Everyone is now completely bald. It's just easier to be bald, these days.",
+   "Age 5 descrip +": "Tiny shampoo droids now shampoo everyone's hair continuously, all day long.",
+   "Age 5 descrip -": "To avoid the stigma of shampoo, most people have replaced their hair with self-cleaning cyber hair.",
+   "Final +": "Star-captains export rare shampoos to aliens. Your shampoo commandments spread to the furthest planets.",
+   "Final -": "Humanity wages constant war, against pro shampoo aliens... but they bear the losses proudly."
+ },
+ {
+   "Variable": "pumpkins",
+   "Age 2 descrip +": "Every single farm in this land now grows pumpkins-- the blessed fruit.",
+   "Age 2 descrip -": "Pumpkins are now banned in this land. Youths smash pumpkins in the town square.",
+   "Age 3 descrip +": "Steam-powered automata carry armfuls of pumpkins to market.",
+   "Age 3 decrip -": "Cursed pumpkin-smugglers are dragged in chains to the courthouse.",
+   "Age 4 descrip +": "Scientists have discovered how to create most of the necessities of life out of pumpkins only.",
+   "Age 4 descrip -": "The prison-industrial complex thrives off a population of imprisoned pumpkin-lovers.",
+   "Age 5 descrip +": "Intelligent uplifted pumpkins hover in the street. Everyone blows kisses at them.",
+   "Age 5 descrip -": "Thoughts about pumpkins are now banned. Good thing that brain-tech eradicates them.",
+   "Final +": "Many humans genetically alter themselves into pumpkins, attaining highest nirvana.",
+   "Final -": "Humans travel to the stars, determined to find a land where cursed pumpkins cannot thrive."
+ },
+ {
+   "Variable": "trash",
+   "Age 2 descrip +": "Your altar is covered in trash.",
+   "Age 2 descrip -": "Temple priests confiscate garbage before it enters your temple.",
+   "Age 3 descrip +": "Your truest worshipers smear themselves with rotten fruit.",
+   "Age 3 decrip -": "Garbagelords rule the criminal underground.",
+   "Age 4 descrip +": "Creative trash arrangements are a prominent genre of art.",
+   "Age 4 descrip -": "The streets are pristine, but at a dire cost.",
+   "Age 5 descrip +": "The first airship made entirely of trash has been consecrated as a holy vessel.",
+   "Age 5 descrip -": "Littering is punishable by death and kill squads patrol the skies.",
+   "Final +": "The planet is darkened by a celestial patina of orbiting filth.",
+   "Final -": "Shortly after every child is born, it is tattooed with the words \"haste makes waste.\""
+ },
+ {
+   "Variable": "humble",
+   "Age 2 descrip +": "Your worshipers constantly reflect on their inadequacies.",
+   "Age 2 descrip -": "Your worshipers are arrogant assholes.",
+   "Age 3 descrip +": "All of the best books are published anonymously.",
+   "Age 3 decrip -": "The rich carry large signs emblazoned with their net worth.",
+   "Age 4 descrip +": "The only acceptable garment is the humble sackcloth.",
+   "Age 4 descrip -": "Handshakes last for, like, a whole minute.",
+   "Age 5 descrip +": "A popular new brainmod removes the capacity to feel pride.",
+   "Age 5 descrip -": "The government provides every citizen with a monthly stipend of cocaine.",
+   "Final +": "Bragging is a jailable offense.",
+   "Final -": "There are two thousand simultanious wars."
+ }
+]
