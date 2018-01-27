@@ -11,7 +11,6 @@ const gameHandlers = Alexa.CreateStateHandler(GameConst.States.EVENTS, {
 },
 'EndGameIntent': function() {
   this.handler.state = GameConst.States.ENDING;
-  //TBD
 },
 'SessionEndedRequest' : function() {
     console.log('Session ended with reason: ' + this.event.request.reason);

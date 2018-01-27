@@ -16,39 +16,101 @@
           "samples": []
         },
         {
-          "name": "CatNegativeIntent",
+          "name": "CatNegIntent",
           "samples": [
             "leave",
             "cruel"
           ]
         },
         {
-          "name": "CatPositiveIntent",
+          "name": "CatPosIntent",
           "samples": [
             "love",
             "kind"
           ]
         },
         {
-          "name": "HelloWorldIntent",
+          "name": "HumbleNegIntent",
           "samples": [
-            "hello",
-            "say hello",
-            "say hello world"
+            "confidence"
           ]
         },
         {
-          "name": "MyNameIsIntent",
-          "slots": [
-            {
-              "name": "name",
-              "type": "AMAZON.US_FIRST_NAME"
-            }
-          ],
+          "name": "HumblePosIntent",
           "samples": [
-            "my name is {name}",
-            "i am {name}",
-            "you can call me {name}"
+            "humility"
+          ]
+        },
+        {
+          "name": "ObjectiveNegIntent",
+          "samples": [
+            "different",
+            "lie"
+          ]
+        },
+        {
+          "name": "ObjectivePosIntent",
+          "samples": [
+            "same",
+            "real"
+          ]
+        },
+        {
+          "name": "PumpkinNegIntent",
+          "samples": [
+            "horrid",
+            "sin",
+            "bad"
+          ]
+        },
+        {
+          "name": "PumpKinPosIntent",
+          "samples": [
+            "blessed",
+            "okay",
+            "good"
+          ]
+        },
+        {
+          "name": "ShampooNegIntent",
+          "samples": [
+            "bad",
+            "right"
+          ]
+        },
+        {
+          "name": "ShampooPosIntent",
+          "samples": [
+            "good",
+            "wrong"
+          ]
+        },
+        {
+          "name": "SpicyNegIntent",
+          "samples": [
+            "mild",
+            "destroy"
+          ]
+        },
+        {
+          "name": "SpicyPosIntent",
+          "samples": [
+            "spicy",
+            "eat"
+          ]
+        },
+        {
+          "name": "TrashNegIntent",
+          "samples": [
+            "punish",
+            "destroy"
+          ]
+        },
+        {
+          "name": "TrashPosIntent",
+          "samples": [
+            "accept",
+            "embrace"
           ]
         }
       ]
