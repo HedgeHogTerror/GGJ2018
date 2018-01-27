@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "brook": {
+      "skill_id": "amzn1.ask.skill.83a4d057-4854-42a3-8749-7fd41dd96845",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-god-brook"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
