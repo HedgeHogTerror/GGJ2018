@@ -1,0 +1,57 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "hello world",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "CatNegativeIntent",
+          "samples": [
+            "leave",
+            "cruel"
+          ]
+        },
+        {
+          "name": "CatPositiveIntent",
+          "samples": [
+            "love",
+            "kind"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "say hello",
+            "say hello world"
+          ]
+        },
+        {
+          "name": "MyNameIsIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "my name is {name}",
+            "i am {name}",
+            "you can call me {name}"
+          ]
+        }
+      ]
+    }
+  }
+}
