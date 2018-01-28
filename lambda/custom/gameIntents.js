@@ -15,6 +15,7 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] = 1;
   this.attributes['currentAge'] += 1;
+  this.attributes['currentEvent'] = randomEvent;
 
   this.emit(':ask', "Lip. num: " + num +". " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] +". Say love or leave." );
 },
@@ -22,13 +23,16 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
 
 'CatPosIntent': function () {
 
-  var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], 1);
+var pos = this.attributes['currentEvent'].resultplus;
+  //var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], 1);
 
     this.context.GameData.message = pos;
     this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatNegIntent': function () {
-  var neg = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], -1);
+
+var neg = this.attributes['currentEvent'].resultminus;
+  //var neg = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], -1);
 
   this.context.GameData.message = neg;
   this.emitWithState('VerifyTheCurrentIntent');
@@ -42,10 +46,10 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   this.emitWithState('VerifyTheCurrentIntent');
 },
 'VerifyTheCurrentIntent': function (){
-
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
   var num = Data.GameData.variableToIndex(variable);
+  this.attributes['currentEvent'] = randomEvent;
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] += 1;
 
