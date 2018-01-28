@@ -76,21 +76,27 @@ var EVENTS_STATE = {
   var vDictionary = this.attributes['vDict'];
   var description = " ... ";//". Here are some things about now. ";
 
-  var first_description = true;
+  var firstDescription = true;
   for(var key in vDictionary){
     var value = vDictionary[key];
-
-    if (first_description) {
-      first_description = false;
-    } else {
-      description += Data.GameData.returnCurrentAgeSound(this.attributes['currentAge']);
-    }
-
-    description += " ... " + Data.GameData.returnDescription(
-       Data.GameData.variableToIndex(key),
+    var variableDescription = Data.GameData.returnDescription(
+      Data.GameData.variableToIndex(key),
       this.attributes['currentAge'],
       value
+    );
+
+    if (variableDescription.length > 1) {
+      if (firstDescription) {
+        firstDescription = false;
+      } else {
+        description += Data.GameData.returnCurrentAgeSound(this.attributes['currentAge']);
+      }
+      description += " ... " + Data.GameData.returnDescription(
+         Data.GameData.variableToIndex(key),
+        this.attributes['currentAge'],
+        value
       );
+    }
   }
 
   description += " ... ";
