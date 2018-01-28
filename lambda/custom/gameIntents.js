@@ -40,17 +40,17 @@ var EVENTS_STATE = {
   var negativeOption = currentEvent.iminus;
   var variable = currentEvent.variable;
 
-  var responseText = "";
+  var responseText = Data.GameData.BELL_SOUND;
 
   // Validation
   var variableChange = 0;
   if (intentSamples.includes(positiveOption)) {
     // TODO cap it?
     variableChange = 1;
-    responseText = currentEvent.resultplus;
+    responseText += currentEvent.resultplus;
   } else if (intentSamples.includes(negativeOption)) {
     variableChange = -1;
-    responseText = currentEvent.resultminus;
+    responseText += currentEvent.resultminus;
   } else {
     // Ugh, re-emit current state description
   }
@@ -75,8 +75,16 @@ var EVENTS_STATE = {
   // tell a big thing
   var vDictionary = this.attributes['vDict'];
   var description = " ... ";//". Here are some things about now. ";
+
+  var first_description = true;
   for(var key in vDictionary){
     var value = vDictionary[key];
+
+    if (first_description) {
+      first_description = false;
+    } else {
+      description += Data.GameData.returnCurrentAgeSound(this.attributes['currentAge']);
+    }
 
     description += " ... " + Data.GameData.returnDescription(
        Data.GameData.variableToIndex(key),
@@ -90,6 +98,7 @@ var EVENTS_STATE = {
   if(this.attributes['currentAge'] >= Data.GameData.maxAges){ // end the game
     this.emit(':tell', responseText
       + " "
+      + Data.GameData.AGE_END_SOUND
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
       + description
       + " You survey all that you have done. And you see. That it is good. The end."
@@ -101,6 +110,7 @@ var EVENTS_STATE = {
 
     this.emit(':ask', responseText
       + " "
+      + Data.GameData.AGE_END_SOUND
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
       + description
       + randomEvent.intro,
