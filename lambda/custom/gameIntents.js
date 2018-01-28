@@ -9,16 +9,21 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   // currentAge
   // array of eventIds to exclude from next roll
 
+
+  // important initialization tasks
+  var vDict = Data.GameData.returnNewVariableDictionary();
+  this.attributes['vDict'] = vDict;
+  this.attributes['currentAge'] = 1;
+
+  // the same crap we should do every time we move
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
   var num = Data.GameData.variableToIndex(variable);
   this.attributes['currentVariable'] = num;
-  this.attributes['currentAge'] = 1;
   this.attributes['currentAge'] += 1;
   this.attributes['currentEvent'] = randomEvent;
 
-  Data.GameData.returnNewVariableDictionary();
-
+  // emit
   this.emit(':ask', randomEvent.intro +". Say love or leave." );
 },
 //TBD These shall be generated....
@@ -46,6 +51,7 @@ var neg = this.attributes['currentEvent'].resultminus;
   this.emitWithState('VerifyTheCurrentIntent');
 },
 'VerifyTheCurrentIntent': function (){
+
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
   var num = Data.GameData.variableToIndex(variable);
@@ -53,16 +59,12 @@ var neg = this.attributes['currentEvent'].resultminus;
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] += 1;
 
-
-
-
-
-
-
-
-
   if(this.context.GameData.currentEvent == 0){ //map to correct...
-    this.emit(':ask', this.context.GameData.message + " . Time passes . " + randomEvent.intro, randomEvent.intro);
+    this.emit(':ask', this.context.GameData.message 
+      + " . Time passes . " 
+      + " . Test thing. " + this.attributes['vDict']['cats']
+      + randomEvent.intro,
+       randomEvent.intro);
   } else this.emit('Unhandled');
 
   // TBD check for end state
