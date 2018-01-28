@@ -4,6 +4,7 @@ var GameConst = require('./gameconst');
 
 var GameData = {
   reload: function (){
+    this.isDebug = false;
     this.repeatWelcome = false;
     this.repeatTutorial = false;
 
@@ -18,6 +19,8 @@ var GameData = {
 
     this.promptEveryTime = false;
     this.repromptIfNoResponse = true;
+
+    this.maxAges = this.isDebug ? 100000000 : 7;
 
       // randomize the question events.
       var questionEvents = require('./q').q;
@@ -66,7 +69,12 @@ var GameData = {
 
     possibleEvents = possibleEvents.filter(index => !isNaN(index));
 
-    var newEventId = Math.floor(Math.random() * Math.floor(possibleEvents.length));
+    if (this.isDebug) {
+      var newEventId = context.debugId;
+      context.debugId++;
+    } else {
+      var newEventId = Math.floor(Math.random() * Math.floor(possibleEvents.length));
+    }
     context.eventsBlacklist.push(newEventId);
 
     return possibleEvents[newEventId];

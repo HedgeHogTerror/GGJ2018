@@ -16,6 +16,7 @@ var EVENTS_STATE = {
   var vDict = Data.GameData.returnNewVariableDictionary();
   this.attributes['vDict'] = vDict;
   this.attributes['currentAge'] = 0;
+  this.attributes['debugId'] = 0;
 
   // generate a new event // the same crap we do every time
   this.attributes['eventsBlacklist'] = new Array();
@@ -85,7 +86,7 @@ var EVENTS_STATE = {
   // random worshipper entrance
   description += Data.GameData.returnRandomWorshipperText();
 
-  if(this.attributes['currentAge'] >= 7){ // end the game
+  if(this.attributes['currentAge'] >= Data.GameData.maxAges){ // end the game
     this.emit(':tell', "You survey all that you have done. And you see. That it is good. The end.");
    }
   else{ // keep playing
