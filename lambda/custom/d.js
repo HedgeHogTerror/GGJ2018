@@ -20,7 +20,7 @@ var d = [
         "agedesc3minus": "Forbidden shampoo cults have sprung up against you, but the inquisition's, steam droids, suppress them.",
         "agedesc4plus": "The financial district is full of long-haired investors trading shampoo futures.",
         "agedesc4minus": "Everyone is now completely bald. It's just easier to be bald, these days.",
-        "agedesc5plus": "Tiny shampoo droids now shampoo everyone's hair continuously, all day long.",
+        "agedesc5plus": "Tiny shampoo droids now shampoo everyone's hair all day long, without stopping. Shampoo tech is more advanced than space exploration... or even farming technology.",
         "agedesc5minus": "To avoid the stigma of shampoo, most people have replaced their hair with self-cleaning cyber hair.",
         "agedesc6plus": "Star-captains export rare shampoos to aliens. Your shampoo commandments spread to the furthest planets.",
         "agedesc6minus": "Humanity wages constant war, against pro shampoo aliens... but they bear the losses proudly."
@@ -49,7 +49,7 @@ var d = [
         "agedesc5plus": "The first airship made entirely of trash has been consecrated as a holy vessel. <say-as interpret-as=\"interjection\">Hip hip hooray</say-as>!",
         "agedesc5minus": "Littering is punishable by death and kill squads patrol the skies.",
         "agedesc6plus": "The planet is darkened by a celestial patina of orbiting filth.",
-        "agedesc6minus": "Shortly after every child is born, it is tattooed with the words \"haste makes waste."
+        "agedesc6minus": "Shortly after every child is born, it is tattooed with the words \"haste makes waste.\""
     },
     {
         "variable": "humble",
@@ -174,7 +174,7 @@ var d = [
         "agedesc2minus": "Temple guards operate on a \"make a crack, get a smack,\" policy, striking any temple-goers who crack their knuckles.",
         "agedesc3plus": "Steam barons have created pneumatic knuckles that crack at the push of a button.",
         "agedesc3minus": "A new glove that eliminates the sound of any accidental knuckle cracking is taking the world by storm.",
-        "agedesc4plus": "Priests encourage worshipers to attend full body crack sessions at your temples, which are now known as \"crack houses.",
+        "agedesc4plus": "Priests encourage worshipers to attend full body crack sessions at your temples, which are now known as \"crack houses.\"",
         "agedesc4minus": "The illicit sound of popping knuckles is banned from all media.",
         "agedesc5plus": "The first human who is able to crack all 360 joints is elevated to sainthood.",
         "agedesc5minus": "Your worshipers guzzle a groundbreaking new serum that removes air bubbles from all synovial fluid, making knuckles uncrackable.",
@@ -203,7 +203,7 @@ var d = [
         "agedesc4plus": "Humanity has been eating iceberg <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> for so long that they have forgotten that other types of salad are possible.",
         "agedesc4minus": "People eat spinach salads almost every day. They have a good time, and it makes them healthy. That's great! Iceberg <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> only exists in the history books.",
         "agedesc5plus": "Inventors have created a new form of <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> which tastes like spinach. Humanity's faith in lettuce has been restored!",
-        "agedesc5minus": "No one has uttered the phrase \"iceberg <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme>\" in over six hundred years. The first word most children learn is \"spinach.",
+        "agedesc5minus": "No one has uttered the phrase \"iceberg <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme>\" in over six hundred years. The first word most children learn is \"spinach.\"",
         "agedesc6plus": "<phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> comes in more flavors than soda. <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> is also packed with nutrients; a single leaf of iceberg <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> can power an adult man for an entire day.",
         "agedesc6minus": "No one remembers what <phoneme alphabet=\"ipa\" ph =\"\u02c8l-e\u0294t\u028c\u02d0s\">lettuce</phoneme> is. Spinach is still around, though, and people love it. Hooray!"
     },
@@ -235,13 +235,13 @@ var d = [
     },
     {
         "variable": "wowza",
-        "agedesc2plus": "Every morning, the sound of peasants greeting one another echoes over the rolling hills. \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!",
-        "agedesc2minus": "Each day, the priests greet newcomers to the temple with your holy phrase: \"<say-as interpret-as=\"interjection\">yowza</say-as>.\" \"peace be with you.",
+        "agedesc2plus": "Every morning, the sound of peasants greeting one another echoes over the rolling hills. \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!\"",
+        "agedesc2minus": "Each day, the priests greet newcomers to the temple with your holy phrase: \"<say-as interpret-as=\"interjection\">yowza</say-as>.\" \"peace be with you.\"",
         "agedesc3plus": "The steam-powered automata, guarding the capital city, know only one phrase: <say-as interpret-as=\"interjection\">wowza</say-as>. which signifies humility and an open spirit.",
         "agedesc3minus": "Steam-powered inquisition droids march through the slums, chanting: <say-as interpret-as=\"interjection\">yowza</say-as>. <say-as interpret-as=\"interjection\">yowza</say-as>. <say-as interpret-as=\"interjection\">yowza</say-as>.",
         "agedesc4plus": "As the stock market opens every morning, traders shout the traditional phrase of greeting and good luck: wohwuhwuh <say-as interpret-as=\"interjection\">wowza</say-as>",
         "agedesc4minus": "Religious police force every citizen to exclaim <say-as interpret-as=\"interjection\">yowza</say-as>. They punish people who do not sound enthusiastic enough.",
-        "agedesc5plus": "Most people's ring tones go, \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!\" \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!",
+        "agedesc5plus": "Most people's ring tones go, \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!\" \"<say-as interpret-as=\"interjection\">wowza</say-as>.\" \"<say-as interpret-as=\"interjection\">wowza</say-as>!\"",
         "agedesc5minus": "Every morning, all school children must stand at their desks and say the word <say-as interpret-as=\"interjection\">yowza</say-as> with their hand over their heart.",
         "agedesc6plus": "So many years have passed that the common phrase <say-as interpret-as=\"interjection\">wowza</say-as> has degenerated into <say-as interpret-as=\"interjection\">wowzer</say-as>. But it's OK!",
         "agedesc6minus": "King Thorvald 6 of, Europa, uses a military laser to carve the word, <say-as interpret-as=\"interjection\">yowza</say-as>. into the surface of Titan, sparking a war with the locals. Typical!"
@@ -253,7 +253,7 @@ var d = [
         "agedesc3plus": "Many priests have small snakes living in their nostrils -- a sign of their holiness.",
         "agedesc3minus": "The most terrifying weapon of all time has been invented: a mechanical trebuchet that fires a boulder comprised entirely of venomous snakes.",
         "agedesc4plus": "The Snake Channel is the most popular television station. It's just 24 hour footage of snakes.",
-        "agedesc4minus": "Snakes are probably under every bed in the world,\" the Church confirms. <say-as interpret-as=\"interjection\">jeepers creepers</say-as>.",
+        "agedesc4minus": "\"Snakes are probably under every bed in the world,\" the Church confirms. <say-as interpret-as=\"interjection\">jeepers creepers</say-as>.",
         "agedesc5plus": "Forked tongue surgery is covered under every health insurance plan.",
         "agedesc5minus": "The World Council ranks snakes as the humanity's number one threat.",
         "agedesc6plus": "Humankind was delighted to discover a race of intelligent space snakes. One of them is now the president of earth.",
