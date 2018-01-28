@@ -10,15 +10,16 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   // array of eventIds to exclude from next roll
 
 
-  // important initialization tasks
+  // important initialization tasks to do once
   var vDict = Data.GameData.returnNewVariableDictionary();
   this.attributes['vDict'] = vDict;
   this.attributes['currentAge'] = 1;
 
-  // the same crap we should do every time we move
+  // generate a new event // the same crap we do every time
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
   var num = Data.GameData.variableToIndex(variable);
+  this.attributes['currentVariableString'] = variable;
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] += 1;
   this.attributes['currentEvent'] = randomEvent;
@@ -32,12 +33,18 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
 
 var pos = this.attributes['currentEvent'].resultplus;
 
+    // set this attribute to positive in vdict
+    this.attributes['vDict'][this.attributes['currentVariableString']] = 1;
+
     this.context.GameData.message = pos;
     this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatNegIntent': function () {
 
 var neg = this.attributes['currentEvent'].resultminus;
+
+  // set this attribute to negative in vdict
+  this.attributes['vDict'][this.attributes['currentVariableString']] = -1;
 
   this.context.GameData.message = neg;
   this.emitWithState('VerifyTheCurrentIntent');
@@ -52,17 +59,19 @@ var neg = this.attributes['currentEvent'].resultminus;
 },
 'VerifyTheCurrentIntent': function (){
 
+  // generate a new event // the same crap we do every time
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
   var num = Data.GameData.variableToIndex(variable);
-  this.attributes['currentEvent'] = randomEvent;
+  this.attributes['currentVariableString'] = variable;
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] += 1;
+  this.attributes['currentEvent'] = randomEvent;
 
   if(this.context.GameData.currentEvent == 0){ //map to correct...
     this.emit(':ask', this.context.GameData.message 
       + " . Time passes . " 
-      + " . Test thing. " + this.attributes['vDict']['cats']
+      + " . Test thing. " 
       + randomEvent.intro,
        randomEvent.intro);
   } else this.emit('Unhandled');
