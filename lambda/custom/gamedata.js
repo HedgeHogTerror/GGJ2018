@@ -53,6 +53,25 @@ var GameData = {
     return randomQuestionEvent;
   },
 
+  getNextRandomEventId: function(context) {
+    var badEvents = context.eventsBlacklist;
+
+    var possibleEvents = new Array(this.questionEvents.length);
+    for (var i = 0; i < possibleEvents.length; ++i) {
+      possibleEvents[i] = i;
+    }
+    for (var i = 0; i < badEvents.length; ++i) {
+      possibleEvents[badEvents[i]] = NaN;
+    }
+
+    possibleEvents = possibleEvents.filter(index => !isNaN(index));
+
+    var newEventId = Math.floor(Math.random() * Math.floor(possibleEvents.length));
+    context.eventsBlacklist.push(newEventId);
+
+    return possibleEvents[newEventId];
+  },
+
   variableToIndex: function(variableString){
     var l = this.variableDescriptions.length;
 

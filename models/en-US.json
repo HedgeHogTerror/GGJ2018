@@ -1,127 +1,353 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "god",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NoIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.YesIntent",
-          "samples": []
-        },
-        {
-          "name": "CatNegIntent",
-          "samples": [
-            "leave",
-            "cruel"
-          ]
-        },
-        {
-          "name": "CatPosIntent",
-          "samples": [
-            "love",
-            "kind"
-          ]
-        },
-        {
-          "name": "HumbleNegIntent",
-          "samples": [
-            "confidence"
-          ]
-        },
-        {
-          "name": "HumblePosIntent",
-          "samples": [
-            "humility"
-          ]
-        },
-        {
-          "name": "ObjectiveNegIntent",
-          "samples": [
-            "different",
-            "lie"
-          ]
-        },
-        {
-          "name": "ObjectivePosIntent",
-          "samples": [
-            "same",
-            "real"
-          ]
-        },
-        {
-          "name": "PumpkinNegIntent",
-          "samples": [
-            "horrid",
-            "sin",
-            "bad"
-          ]
-        },
-        {
-          "name": "PumpKinPosIntent",
-          "samples": [
-            "blessed",
-            "okay",
-            "good"
-          ]
-        },
-        {
-          "name": "ShampooNegIntent",
-          "samples": [
-            "bad",
-            "right"
-          ]
-        },
-        {
-          "name": "ShampooPosIntent",
-          "samples": [
-            "good",
-            "wrong"
-          ]
-        },
-        {
-          "name": "SpicyNegIntent",
-          "samples": [
-            "mild",
-            "destroy"
-          ]
-        },
-        {
-          "name": "SpicyPosIntent",
-          "samples": [
-            "spicy",
-            "eat"
-          ]
-        },
-        {
-          "name": "TrashNegIntent",
-          "samples": [
-            "punish",
-            "destroy"
-          ]
-        },
-        {
-          "name": "TrashPosIntent",
-          "samples": [
-            "accept",
-            "embrace"
-          ]
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "god", 
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent", 
+                    "samples": []
+                }, 
+                {
+                    "name": "AMAZON.HelpIntent", 
+                    "samples": []
+                }, 
+                {
+                    "name": "AMAZON.NoIntent", 
+                    "samples": []
+                }, 
+                {
+                    "name": "AMAZON.YesIntent", 
+                    "samples": []
+                }, 
+                {
+                    "name": "AMAZON.StopIntent", 
+                    "samples": []
+                }, 
+                {
+                    "name": "love_intent", 
+                    "samples": [
+                        "love"
+                    ]
+                }, 
+                {
+                    "name": "leave_intent", 
+                    "samples": [
+                        "leave"
+                    ]
+                }, 
+                {
+                    "name": "kind_intent", 
+                    "samples": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "name": "cruel_intent", 
+                    "samples": [
+                        "cruel"
+                    ]
+                }, 
+                {
+                    "name": "good_intent", 
+                    "samples": [
+                        "good"
+                    ]
+                }, 
+                {
+                    "name": "bad_intent", 
+                    "samples": [
+                        "bad"
+                    ]
+                }, 
+                {
+                    "name": "wrong_intent", 
+                    "samples": [
+                        "wrong"
+                    ]
+                }, 
+                {
+                    "name": "right_intent", 
+                    "samples": [
+                        "right"
+                    ]
+                }, 
+                {
+                    "name": "blessed_intent", 
+                    "samples": [
+                        "blessed"
+                    ]
+                }, 
+                {
+                    "name": "horrid_intent", 
+                    "samples": [
+                        "horrid"
+                    ]
+                }, 
+                {
+                    "name": "okay_intent", 
+                    "samples": [
+                        "okay"
+                    ]
+                }, 
+                {
+                    "name": "sin_intent", 
+                    "samples": [
+                        "sin"
+                    ]
+                }, 
+                {
+                    "name": "accept_intent", 
+                    "samples": [
+                        "accept"
+                    ]
+                }, 
+                {
+                    "name": "punish_intent", 
+                    "samples": [
+                        "punish"
+                    ]
+                }, 
+                {
+                    "name": "embrace_intent", 
+                    "samples": [
+                        "embrace"
+                    ]
+                }, 
+                {
+                    "name": "destroy_intent", 
+                    "samples": [
+                        "destroy"
+                    ]
+                }, 
+                {
+                    "name": "humility_intent", 
+                    "samples": [
+                        "humility"
+                    ]
+                }, 
+                {
+                    "name": "confidence_intent", 
+                    "samples": [
+                        "confidence"
+                    ]
+                }, 
+                {
+                    "name": "spicy_intent", 
+                    "samples": [
+                        "spicy"
+                    ]
+                }, 
+                {
+                    "name": "mild_intent", 
+                    "samples": [
+                        "mild"
+                    ]
+                }, 
+                {
+                    "name": "eat_intent", 
+                    "samples": [
+                        "eat"
+                    ]
+                }, 
+                {
+                    "name": "same_intent", 
+                    "samples": [
+                        "same"
+                    ]
+                }, 
+                {
+                    "name": "different_intent", 
+                    "samples": [
+                        "different"
+                    ]
+                }, 
+                {
+                    "name": "real_intent", 
+                    "samples": [
+                        "real"
+                    ]
+                }, 
+                {
+                    "name": "lie_intent", 
+                    "samples": [
+                        "lie"
+                    ]
+                }, 
+                {
+                    "name": "allowed_intent", 
+                    "samples": [
+                        "allowed"
+                    ]
+                }, 
+                {
+                    "name": "forbidden_intent", 
+                    "samples": [
+                        "forbidden"
+                    ]
+                }, 
+                {
+                    "name": "just_intent", 
+                    "samples": [
+                        "just"
+                    ]
+                }, 
+                {
+                    "name": "unjust_intent", 
+                    "samples": [
+                        "unjust"
+                    ]
+                }, 
+                {
+                    "name": "two_intent", 
+                    "samples": [
+                        "two"
+                    ]
+                }, 
+                {
+                    "name": "three_intent", 
+                    "samples": [
+                        "three"
+                    ]
+                }, 
+                {
+                    "name": "light_intent", 
+                    "samples": [
+                        "light"
+                    ]
+                }, 
+                {
+                    "name": "dark_intent", 
+                    "samples": [
+                        "dark"
+                    ]
+                }, 
+                {
+                    "name": "food_intent", 
+                    "samples": [
+                        "food"
+                    ]
+                }, 
+                {
+                    "name": "foe_intent", 
+                    "samples": [
+                        "foe"
+                    ]
+                }, 
+                {
+                    "name": "cracked_intent", 
+                    "samples": [
+                        "cracked"
+                    ]
+                }, 
+                {
+                    "name": "uncracked_intent", 
+                    "samples": [
+                        "uncracked"
+                    ]
+                }, 
+                {
+                    "name": "spare_intent", 
+                    "samples": [
+                        "spare"
+                    ]
+                }, 
+                {
+                    "name": "kill_intent", 
+                    "samples": [
+                        "kill"
+                    ]
+                }, 
+                {
+                    "name": "lettuce_intent", 
+                    "samples": [
+                        "lettuce"
+                    ]
+                }, 
+                {
+                    "name": "spinach_intent", 
+                    "samples": [
+                        "spinach"
+                    ]
+                }, 
+                {
+                    "name": "bogus_intent", 
+                    "samples": [
+                        "bogus"
+                    ]
+                }, 
+                {
+                    "name": "tryharder_intent", 
+                    "samples": [
+                        "try harder"
+                    ]
+                }, 
+                {
+                    "name": "giveup_intent", 
+                    "samples": [
+                        "give up"
+                    ]
+                }, 
+                {
+                    "name": "free_intent", 
+                    "samples": [
+                        "free"
+                    ]
+                }, 
+                {
+                    "name": "hidden_intent", 
+                    "samples": [
+                        "hidden"
+                    ]
+                }, 
+                {
+                    "name": "polite_intent", 
+                    "samples": [
+                        "polite"
+                    ]
+                }, 
+                {
+                    "name": "nasty_intent", 
+                    "samples": [
+                        "nasty"
+                    ]
+                }, 
+                {
+                    "name": "wowza_intent", 
+                    "samples": [
+                        "wowza"
+                    ]
+                }, 
+                {
+                    "name": "yowza_intent", 
+                    "samples": [
+                        "yowza"
+                    ]
+                }, 
+                {
+                    "name": "fear_intent", 
+                    "samples": [
+                        "fear"
+                    ]
+                }, 
+                {
+                    "name": "snakes_intent", 
+                    "samples": [
+                        "snakes"
+                    ]
+                }, 
+                {
+                    "name": "hurray_intent", 
+                    "samples": [
+                        "hurray"
+                    ]
+                }, 
+                {
+                    "name": "watchout_intent", 
+                    "samples": [
+                        "watch out"
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }
