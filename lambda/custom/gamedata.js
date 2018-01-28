@@ -73,7 +73,7 @@ var GameData = {
       context.debugId++;
     } else {
       var newEventId = possibleEvents[
-        Math.floor(Math.random() * Math.floor(possibleEvents.length))
+        Math.floor(Math.random() * possibleEvents.length)
       ];
     }
     context.eventsBlacklist.push(newEventId);
