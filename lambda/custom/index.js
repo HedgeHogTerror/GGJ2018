@@ -29,7 +29,7 @@ const newSessionHandlers = {
         // }
 
         this.handler.state = Data.GameConst.States.SETUP;
-        this.response.speak('Yo. ' + Data.GameData.randomDescription())
+        this.response.speak('Cheers. ' + Data.GameData.randomDescription())
         //possible data save
           // you have created/?destroyed + this.attributes['gamesPlayed'].toString() + ' worlds')
              .listen('Say yes to start a world or no to quit.');

@@ -30,12 +30,15 @@ var GameData = {
 
   randomDescription: function(){
 
-    //int l = variableDescriptions.length;
+    var l = this.variableDescriptions.length;
 
-    //return "length is " + l;
+    return "hello aardvark, num is "+this.getRandomInt(0,l);
+  },
 
-    return "hello sailor";
+  getRandomInt: function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
 
 
 };
