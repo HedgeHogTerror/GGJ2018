@@ -83,7 +83,7 @@ var GameData = {
 
   returnDescription: function(variableIndex, age, sign){
 
-    var desc = " neutral ";
+    var desc = " ";
 
     var variableRow = this.variableDescriptions[variableIndex];
 

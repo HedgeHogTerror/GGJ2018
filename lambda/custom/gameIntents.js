@@ -59,6 +59,19 @@ var neg = this.attributes['currentEvent'].resultminus;
 },
 'VerifyTheCurrentIntent': function (){
 
+  // tell a big thing
+  var vDictionary = this.attributes['vDict'];
+  var description = ". Here are some things about now. ";
+  for(var key in vDictionary){
+    var value = vDictionary[key];
+
+    description += " . " + Data.GameData.returnDescription(
+       Data.GameData.variableToIndex(key),
+      this.attributes['currentAge'],
+      value
+      );
+  }
+
   // generate a new event // the same crap we do every time
   var randomEvent = Data.GameData.randomEvent();
   var variable = randomEvent.variable;
@@ -70,8 +83,8 @@ var neg = this.attributes['currentEvent'].resultminus;
 
   if(this.context.GameData.currentEvent == 0){ //map to correct...
     this.emit(':ask', this.context.GameData.message 
-      + " . Time passes . " 
-      + " . Test thing. " 
+      + " . Time passes. Age is " +  this.attributes['currentAge']
+      + description
       + randomEvent.intro,
        randomEvent.intro);
   } else this.emit('Unhandled');
