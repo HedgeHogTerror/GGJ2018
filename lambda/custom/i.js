@@ -222,6 +222,34 @@ var i = {
 'watchout_intent': function () {
    var intent_samples = new Array("watch out");
    this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'join_intent': function () {
+   var intent_samples = new Array("join");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'paper_intent': function () {
+   var intent_samples = new Array("paper");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'plastic_intent': function () {
+   var intent_samples = new Array("plastic");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'beautiful_intent': function () {
+   var intent_samples = new Array("beautiful");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'ridiculous_intent': function () {
+   var intent_samples = new Array("ridiculous");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'art_intent': function () {
+   var intent_samples = new Array("art");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'ugly_intent': function () {
+   var intent_samples = new Array("ugly");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
 }
 };
 

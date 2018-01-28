@@ -62,7 +62,7 @@
    "agedesc5plus": "A popular new brainmod removes the capacity to feel pride.",
    "agedesc5minus": "The government provides every citizen with a monthly stipend of cocaine.",
    "agedesc6plus": "Bragging lands you a solid decade in space jail.",
-   "agedesc6minus": "There are two thousand simultaneous wars."
+   "agedesc6minus": "Due to the extreme confidence of all global citizens, there are two thousand simultaneous wars."
  },
  {
    "variable": "spicy",
@@ -139,7 +139,7 @@
    "agedesc4minus": "Every night, the night-bells toll, and all lights shut off simultaneously, plunging the city into the <phoneme alphabet=\"ipa\" ph=\"ˈblɛsəd\">blessed</phoneme> darkness of night. Those who break the holy hours with a flashlight risk capital punishment.",
    "agedesc5plus": "Many humans have modified their genetic code, so that they glow like a glowstick. This ensures that they can never again, accidentally commit the sin, of standing in a dark room.",
    "agedesc5minus": "In the wild urban hellscapes of this futuristic, age, criminals trade glowsticks in grimy alleyways, and cops hurry to break up basement lightbulb raves.",
-   "agedesc6plus": "Earth burns almost as brightly as the sun. Most plants and animals have been crisped to death by the power of humanity's lightbulbs. Visitors to Earth are forced to wear protective clothing, and sunglasses thicker than a human fist.",
+   "agedesc6plus": "Earth burns almost as brightly as the sun. Many plants and animals have been crisped to death by the power of humanity's lightbulbs. Visitors to Earth are forced to wear protective clothing, and sunglasses thicker than a human fist.",
    "agedesc6minus": "From space, one can see darkness fall like a crashing wave, as the dateline marches, inexorably, around the earth. All citizens unquestioningly obey the Edict of Night."
  },
  {
@@ -208,7 +208,7 @@
    "agedesc6minus": "No one remembers what <phoneme alphabet=\"ipa\" ph =\"ˈl-eʔtʌːs\">lettuce</phoneme> is. Spinach is still around, though, and people love it. Hooray!"
  },
  {
-   "variable": "flossing",
+   "variable": "floss",
    "agedesc2plus": "Your churchgoers are easily distinguishable from heathens by their immaculately flossed teeth.",
    "agedesc2minus": "Losing a tooth to dental rot is considered a holy rite of passage.",
    "agedesc3plus": "Flossing parlours are more common than convenience stores.",
@@ -271,5 +271,44 @@
    "agedesc5minus": "To avoid the mortal specter of death, many humans are uploading their brains to deep storage. Fear of death is being replaced by a fear of bit rot.",
    "agedesc6plus": "Giant space mausoleums orbit the sun. They cast enormous, coffin-shaped shadows on the earth several times a day, much to humanity's glee. There are now more graves on earth than living human beings.",
    "agedesc6minus": "To avoid death, everyone is cloned ten thousand times at birth, so their consciousness can be uploaded to clones in case of an accident. People now die over and over again many times. No one can agree whether this is better."
+ },
+ {
+   "variable": "ocean",
+   "agedesc2plus": "To live out your law, many civilizations have taken to the waves. Whole cities have relocated to floating wooden platforms in the sea.",
+   "agedesc2minus": "To live out your laws about the ocean, most civilizations have outlawed boats. Many coastal cities have built walls on the beach to keep the waves at bay.",
+   "agedesc3plus": "Scientists have perfected submarine technology. Your worshippers are now building cities on the bottom of the ocean, and the most common household pet is now a tuna.",
+   "agedesc3minus": "Every day, armored barges sail out to make war against the sea. Soldiers shoot fish and cannons fire into the waves. But the sea, is a resilient foe.",
+   "agedesc4plus": "Domed sea-cities cover the bottom of every ocean. Most children learn to swim before they can walk. Dolphins have full human rights and a representative in the American senate.",
+   "agedesc4minus": "The UN begins its greatest project: covering the entire ocean with a big tarp. Nations celebrate!",
+   "agedesc5plus": "Finally, body mod technology has given humanity the gift of gills. Millions of people move into the ocean. As a result, the ocean becomes incredibly dirty, and a vector for terrible diseases.",
+   "agedesc5minus": "World leaders declare that the sea will be replaced, with a different fluid, composed entirely of nanites. The great project to truly free earth from the sea has begun.",
+   "agedesc6plus": "Global warming finally causes the last scrap of dry land to sink beneath the waves. The world... is now, a Waterworld. Humans celebrate!",
+   "agedesc6minus": "Finally, the asteroid belt is open for colonization. Ocean-phobic humans flee there en masse, desperate to leave the, blue, part of the pale blue dot behind."
+ },
+ {
+   "variable": "paper",
+   "agedesc2plus": "The severed heads of criminals are kept in paper bags. to save the environment.",
+   "agedesc2minus": "Every scientist in the world has \"invent plastic\" at the top of their to-do list.",
+   "agedesc3plus": "Forests dwindle as the frenzied pursuit of the holiest paper continues. Plastic is a forbidden technology.",
+   "agedesc3minus": "A priest tells his paritioners, \"we must, ourselves, seek to be as plastic. Supple, pliable, ever bending to the will of our holy God.\" Dolphins around the world are eating plastic and dying.",
+   "agedesc4plus": "The UN mandates that cities must have one holy origami museum for every 1000 people.",
+   "agedesc4minus": "The city made entirely of plastic is a holy mecca.",
+   "agedesc5plus": "The newest spaceship from NASA will be made out of paper. <say-as interpret-as=\"interjection\">spoiler alert</say-as>. the astronauts will die.",
+   "agedesc5minus": "Most body parts on most people are now made of plastic.",
+   "agedesc6plus": "Due to the unrelenting demand for holy paper, forests are extinct. The o-zone is gone and the world is on fire.",
+   "agedesc6minus": "A second moon made entirely of plastic now orbits the earth."
+ },
+ {
+   "variable": "didgeridoo",
+   "agedesc2plus": "Holy didgeridoos call all worshipers to church. Wow wow bow wow wow bow wow wow wow.",
+   "agedesc2minus": "Children whisper tales of the forbidden didgeridoo. They say it sounds like this: Wow wow bow wow wow bow wow wow wow.",
+   "agedesc3plus": "All children are taught the didgeridoo in school. <prosody rate=\"60%\"><prosody pitch=\"low\"> wuh bubba Bubba wuh buh bubba wuh wuh bubba wuh wuh bubba buh</prosody></prosody>",
+   "agedesc3minus": "Legends of the unholy instrument live on, despite the best efforts of church thought police. <prosody rate=\"60%\"><prosody pitch=\"low\"> wuh bubba Bubba wuh buh bubba wuh wuh bubba wuh wuh bubba buh</prosody></prosody>",
+   "agedesc4plus": "The mournful holy didgeridoo drones on city-wide speakers from noon to one every day. <prosody rate=\"20%\"><prosody pitch=\"x-low\">wow bubba wee bubba wee bubba wow</prosody></prosody>",
+   "agedesc4minus": "Native peoples play the didgeridoo in secret soundproof studios, hidden from the church. <prosody rate=\"20%\"><prosody pitch=\"x-low\">wow bubba wee bubba wee bubba wow</prosody></prosody>",
+   "agedesc5plus": "A new crypto bodyhack allows worshipers to reproduce the sound of a digeridoo with only their voice. <prosody rate=\"20%\"><prosody pitch=\"x-low\"><say-as interpret-as=\"interjection\">wow</say-as>.</prosody></prosody>",
+   "agedesc5minus": "Holy assassins pursue the didgeridoo cult, but a single mournful note can still be heard on the dark web: <prosody rate=\"20%\"><prosody pitch=\"x-low\"><say-as interpret-as=\"interjection\">wow</say-as>.</prosody></prosody>",
+   "agedesc6plus": "Church generation ships broadcast the holy sound in the furthest reaches of the galaxy.",
+   "agedesc6minus": "The evil didgeridoo cult has found a new home on Gliese 581d, an extrasolar planet 20.4 lightyears from earth."
  }
 ]

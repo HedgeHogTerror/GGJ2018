@@ -351,6 +351,48 @@
                     "samples": [
                         "watch out"
                     ]
+                },
+                {
+                    "name": "join_intent",
+                    "samples": [
+                        "join"
+                    ]
+                },
+                {
+                    "name": "paper_intent",
+                    "samples": [
+                        "paper"
+                    ]
+                },
+                {
+                    "name": "plastic_intent",
+                    "samples": [
+                        "plastic"
+                    ]
+                },
+                {
+                    "name": "beautiful_intent",
+                    "samples": [
+                        "beautiful"
+                    ]
+                },
+                {
+                    "name": "ridiculous_intent",
+                    "samples": [
+                        "ridiculous"
+                    ]
+                },
+                {
+                    "name": "art_intent",
+                    "samples": [
+                        "art"
+                    ]
+                },
+                {
+                    "name": "ugly_intent",
+                    "samples": [
+                        "ugly"
+                    ]
                 }
             ]
         }

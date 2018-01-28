@@ -86,7 +86,7 @@ var q = [
         "intro": "O God, our scholars cannot decide which is the more important virtue: humility or confidence?",
         "iplus": "humility",
         "iminus": "confidence",
-        "resultplus": "The scholar bows so deeply that when he rises, his forehead is covered in dirt.",
+        "resultplus": "The scholar boughs so deeply that when he rises, his forehead is covered in dirt.",
         "resultminus": "The scholar chuckles. \"I knew it,\" he says."
     },
     {
@@ -95,7 +95,7 @@ var q = [
         "intro": "Mighty One, my neighbor boasts about his undeniably massive muscles constantly. What is more important, humility or confidence?",
         "iplus": "humility",
         "iminus": "confidence",
-        "resultplus": "The figure bows her head, overcome by your tremendous wisdom.",
+        "resultplus": "The figure boughs her head, overcome by your tremendous wisdom.",
         "resultminus": "\"Yes,\" says the woman. \"He earned his muscles through hard work. He is right to be proud.\""
     },
     {
@@ -150,7 +150,7 @@ var q = [
         "iplus": "good",
         "iminus": "bad",
         "resultplus": "The father says, \"I understand, holy one. I shall force my child to eat the iced creams.\"",
-        "resultminus": "The father bows and says, \"I shall never again feed my child the cursed iced creams.\""
+        "resultminus": "The father boughs and says, \"I shall never again feed my child the cursed iced creams.\""
     },
     {
         "eventname": "Hawaiian 1",
@@ -176,7 +176,7 @@ var q = [
         "intro": "Lord, my wife is happy with our two children, but I want a third. How many children shall we have? Two, or three?",
         "iplus": "two",
         "iminus": "three",
-        "resultplus": "The man bows. He has seen the error of his ways and will create no more fruits of his loins.",
+        "resultplus": "The man boughs. He has seen the error of his ways and will create no more fruits of his loins.",
         "resultminus": "The man thanks you with a smile. He heads home to create one additional fruit of his loins."
     },
     {
@@ -385,6 +385,60 @@ var q = [
         "iminus": "fear",
         "resultplus": "The man nods his ancient head. He says, \"If that's what you say, then I am excited to die.\"",
         "resultminus": "The man nods his ancient head. \"I understand, great one. I will begin the search for immortality immediately.\""
+    },
+    {
+        "eventname": "Ocean 1",
+        "variable": "ocean",
+        "intro": "O powerful god, I fear the ocean, and the sight of its dark mystery makes me nauseous indeed. But my friend says that there is much money to be made from the fruits of the ocean. Who is right? Is the ocean good or bad?",
+        "iplus": "good",
+        "iminus": "bad",
+        "resultplus": "The man sighs. He says, \"I suppose I will have to learn to tolerate the large water.\"",
+        "resultminus": "The man takes your verdict as permission to wage war against the sea."
+    },
+    {
+        "eventname": "Ocean 2",
+        "variable": "ocean",
+        "intro": "O Lord, I find the ocean very cool and good, but my fiance finds the ocean very scary, and she refuses to live with me on a houseboat. Should she join me, or leave me?",
+        "iplus": "join",
+        "iminus": "leave",
+        "resultplus": "The man goes out to tell his wife the good news about how she has to live on a boat now.",
+        "resultminus": "The man hangs his head and goes to live a lonely life on the waves."
+    },
+    {
+        "eventname": "Paper 1",
+        "variable": "paper",
+        "intro": "Almighty God, I must transport my food into my house, but I know not what vessel I should use. Paper, or plastic?",
+        "iplus": "paper",
+        "iminus": "plastic",
+        "resultplus": "The disciple thanks you for your wisdom. He leaves in pursuit of a papery vessel.",
+        "resultminus": "The disciple thanks you for your wisdom. He leaves in pursuit of a divine plastics."
+    },
+    {
+        "eventname": "Paper 2",
+        "variable": "paper",
+        "intro": "O holy one, my husband wishes to make our restaurant menus out of naked paper, but I believe that they should be laminated in plastic. Is he right, or is he wrong?",
+        "iplus": "right",
+        "iminus": "wrong",
+        "resultplus": "The disciple says, \"Even though unlaminated menus will probably grow all oily and gross, I trust in the wisdom of your holy command. Thank you.\"",
+        "resultminus": "The disciple says, \"thank you, my lord. Our menus will surely be free of oily stains.\""
+    },
+    {
+        "eventname": "Didgeridoo 1",
+        "variable": "didgeridoo",
+        "intro": "Awesome god, my girlfriend plays the didgeridoo at all hours of the night and I am going mad. Is the sound of the didgeridoo beautiful or ridiculous?",
+        "iplus": "beautiful",
+        "iminus": "ridiculous",
+        "resultplus": "The supplicant says, \"thank you, my lord. I will try my best to find the beauty in the strange sounds of the didgeridoo.\"",
+        "resultminus": "The supplicant smiles. \"I am glad that the miserable sound will finally end.\""
+    },
+    {
+        "eventname": "Didgeridoo 2",
+        "variable": "didgeridoo",
+        "intro": "Dear Lord, I wish to join the syphony orchestra, but they will not let me, for I play the didgeridoo. Is the sound of my didgeridoo art, or is it ugly?",
+        "iplus": "art",
+        "iminus": "ugly",
+        "resultplus": "The performer thanks you and uses your decree to get the symphony orchestra director fired.",
+        "resultminus": "The performer's face falls. Her eyes well with tears. \"Thank you, o lord, for your verdict,\" she says."
     }
 ];
 
