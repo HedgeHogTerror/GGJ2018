@@ -8,25 +8,15 @@ GOD_ROOT = os.path.join(os.path.dirname(__file__), '..')
 def generate_i(functions):
     return 'var i = {{\n{}\n}};\n\nexports.i = i;'.format(functions)
 
-def generate_q(events=None):
-    if not events:
-        with open(os.path.join(GOD_ROOT, 'jsonData', 'ExampleEvents1.json')) as fs:
-            events = json.load(fs)
+def generate_q(events):
     events = json.dumps(events, indent=4)
     return 'var q = {};\n\nexports.q = q;'.format(events)
 
-def generate_d(descriptions=None):
-    if not descriptions:
-        with open(os.path.join(GOD_ROOT, 'jsonData', 'ExampleAgeDescriptions1.json')) as fs:
-            descriptions = json.load(fs)
+def generate_d(descriptions):
     descriptions = json.dumps(descriptions, indent=4)
     return 'var d = {};\n\nexports.d = d;'.format(descriptions)
 
-def generate_model(events=None):
-    if not events:
-        with open(os.path.join(GOD_ROOT, 'jsonData', 'ExampleEvents1.json')) as fs:
-            events = json.load(fs)
-
+def generate_model(events):
     intents = [
         {
             'name': 'AMAZON.{}Intent'.format(amazon_name),
@@ -43,17 +33,10 @@ def generate_model(events=None):
 
     intent_set = set()
     for event in events:
-<<<<<<< HEAD
         for intent in [ event['iplus'], event['iminus'] ]:
             if intent not in intent_set:
                 intents.append({
                     'name': '{}_intent'.format(intent.replace(' ', '')),
-=======
-        for intent in [ event['intent +'], event['Intent -'] ]:
-            if intent not in intent_set:
-                intents.append({
-                    'name': '{}_intent'.format(intent),
->>>>>>> 081b51aa8a3844a75091bfab62bd5d8d3d8661f3
                     'samples': [intent],
                 })
                 intent_set.add(intent)
@@ -67,13 +50,8 @@ def generate_model(events=None):
         }
     }
 
-def generate_functions(model=None):
+def generate_functions(model):
     output_lines = []
-
-    if model is None:
-        with open(os.path.join(GOD_ROOT, 'models', 'en-US.json')) as fs:
-            model = json.load(fs)
-
     intents = model['interactionModel']['languageModel']['intents']
 
     for intent in intents:
@@ -96,9 +74,18 @@ def generate_functions(model=None):
 
 
 if __name__ == '__main__':
-    model = generate_model()
-    q_file = generate_q()
-    d_file = generate_d()
+    with open(os.path.join(GOD_ROOT, 'jsonData', 'ExampleEvents1.json')) as fs:
+        events = json.load(fs)
+
+    with open(os.path.join(GOD_ROOT, 'jsonData', 'ExampleAgeDescriptions1.json')) as fs:
+        descriptions = json.load(fs)
+
+    with open(os.path.join(GOD_ROOT, 'models', 'en-US.json')) as fs:
+        model = json.load(fs)
+
+    model = generate_model(events)
+    q_file = generate_q(events)
+    d_file = generate_d(descriptions)
 
     functions = generate_functions(model)
     i_file = generate_i(functions)

@@ -29,6 +29,21 @@
           }
         }
       }
+    },
+    "default": {
+      "skill_id": "amzn1.ask.skill.99271874-1cc0-4b3d-9385-ee18a6ccb0fb",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-god-default"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
