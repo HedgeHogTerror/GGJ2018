@@ -21,19 +21,23 @@ var GameData = {
 
       // randomize the question events.
       var questionEvents = require('./q').q;
-      for (var i = questionEvents.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = questionEvents[i];
-          questionEvents[i] = questionEvents[j];
-          questionEvents[j] = temp;
-      }
       this.questionEvents = questionEvents;
       this.questionIndex = 0;
 
       var variableDescriptions = require('./d').d;
       this.variableDescriptions = variableDescriptions;
+  },
 
+  randomDescription: function(){
+
+    //int l = variableDescriptions.length;
+
+    //return "length is " + l;
+
+    return "hello sailor";
   }
+
+
 };
 
 module.exports = { GameData, GameConst};
