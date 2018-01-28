@@ -26,8 +26,8 @@ var GameData = {
     this.variableDescriptions = require('./d').d;
 
     this.BELL_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/bell.mp3\'/>";
-    this.AGE_END_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/Age_End.mp3\'/>";
-    this.FOOTSTEPS_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/supplicant.mp3\'/>";
+    this.AGE_END_SOUND = "";//"<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/Age_End.mp3\'/>";
+    this.FOOTSTEPS_SOUND = "";//"<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/supplicant.mp3\'/>";
   },
 
   randomDescription: function(){
