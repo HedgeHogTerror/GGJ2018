@@ -60,8 +60,8 @@ def generate_functions(model=None):
         if 'AMAZON' not in name:
             function_output = '\n'.join([
                 "'{}': function () {{".format(name),
-                "   this.context.samples = new Array({});".format(samples),
-                "   this.emitWithState('VerifyTheCurrentIntent');",
+                "   intent_samples = new Array({});".format(samples),
+                "   this.emitWithState('VerifyTheCurrentIntent', intent_samples);",
                 "}",
             ])
             output_lines.append(function_output)
@@ -72,3 +72,6 @@ if __name__ == '__main__':
     model = generate_model()
     print(json.dumps(model))
     print(generate_functions(model))
+
+    with open(os.path.join(GOD_ROOT, 'models', 'en-US.json'), 'w') as fs:
+        json.dump(model, fs)
