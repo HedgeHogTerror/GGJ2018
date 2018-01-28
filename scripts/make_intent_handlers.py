@@ -43,10 +43,17 @@ def generate_model(events=None):
 
     intent_set = set()
     for event in events:
+<<<<<<< HEAD
         for intent in [ event['iplus'], event['iminus'] ]:
             if intent not in intent_set:
                 intents.append({
                     'name': '{}_intent'.format(intent.replace(' ', '')),
+=======
+        for intent in [ event['intent +'], event['Intent -'] ]:
+            if intent not in intent_set:
+                intents.append({
+                    'name': '{}_intent'.format(intent),
+>>>>>>> 081b51aa8a3844a75091bfab62bd5d8d3d8661f3
                     'samples': [intent],
                 })
                 intent_set.add(intent)
