@@ -27,8 +27,9 @@ const newSessionHandlers = {
         //     this.attributes['currentEvent'] = 0;
         //     this.attributes['currentEventMessage'] = '';
         // }
+
         this.handler.state = Data.GameConst.States.SETUP;
-        this.response.speak('Welcome, would you like to start a new world?')
+        this.response.speak('Hey there buddy, would you like to start a new world? ' + Data.GameData.questionEvents[0].variable)
         //possible data save
           // you have created/?destroyed + this.attributes['gamesPlayed'].toString() + ' worlds')
              .listen('Say yes to start a world or no to quit.');
