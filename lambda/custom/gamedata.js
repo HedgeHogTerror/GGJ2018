@@ -170,7 +170,7 @@ var GameData = {
 
     var rint = this.getRandomInt(0, length-1);
 
-    return this.FOOTSTEPS_SOUND + ". " + approaches[rint] + " . ";
+    return this.FOOTSTEPS_SOUND + " " + approaches[rint] + " . ";
   },
 
   returnDescription: function(variableIndex, age, sign){
