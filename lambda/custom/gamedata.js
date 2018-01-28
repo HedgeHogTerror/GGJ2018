@@ -20,7 +20,7 @@ var GameData = {
     this.promptEveryTime = false;
     this.repromptIfNoResponse = true;
 
-    this.maxAges = this.isDebug ? 100000000 : 7;
+    this.maxAges = this.isDebug ? 100000000 : 6;
 
       // randomize the question events.
       var questionEvents = require('./q').q;
@@ -148,7 +148,7 @@ var GameData = {
 
     var length = approaches.length;
 
-    var rint = this.getRandomInt(0, length);
+    var rint = this.getRandomInt(0, length-1);
 
     return approaches[rint] + " . ";
   },

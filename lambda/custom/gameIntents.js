@@ -71,7 +71,7 @@ var EVENTS_STATE = {
   this.attributes['currentEventId'] = randomEventId;
   this.attributes['currentEvent'] = randomEvent;
   this.attributes['currentAge'] += 1;
-  this.attributes['vDict'][variable] += variableChange;
+  this.attributes['vDict'][variable] = variableChange;
 
   // tell a big thing
   var vDictionary = this.attributes['vDict'];
@@ -88,13 +88,18 @@ var EVENTS_STATE = {
 
   description += " ... ";
 
-  // random worshipper entrance
-  description += Data.GameData.returnRandomWorshipperText();
-
   if(this.attributes['currentAge'] >= Data.GameData.maxAges){ // end the game
-    this.emit(':tell', "You survey all that you have done. And you see. That it is good. The end.");
+    this.emit(':tell', responseText
+      + " "
+      + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+      + description
+      + " You survey all that you have done. And you see. That it is good. The end."
+    );
    }
   else{ // keep playing
+    // random worshipper entrance
+    description += Data.GameData.returnRandomWorshipperText();
+
     this.emit(':ask', responseText
       + " "
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
