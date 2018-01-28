@@ -16,7 +16,6 @@ var EVENTS_STATE = {
   var vDict = Data.GameData.returnNewVariableDictionary();
   this.attributes['vDict'] = vDict;
   this.attributes['currentAge'] = 1;
-  this.attributes['debugId'] = 0;
 
   // generate a new event // the same crap we do every time
   this.attributes['eventsBlacklist'] = new Array();

@@ -70,14 +70,16 @@ var GameData = {
     possibleEvents = possibleEvents.filter(index => !isNaN(index));
 
     if (this.isDebug) {
-      var newEventId = context.debugId;
+      var newEventId = possibleEvents[0];
       context.debugId++;
     } else {
-      var newEventId = Math.floor(Math.random() * Math.floor(possibleEvents.length));
+      var newEventId = possibleEvents[
+        Math.floor(Math.random() * Math.floor(possibleEvents.length))
+      ];
     }
     context.eventsBlacklist.push(newEventId);
 
-    return possibleEvents[newEventId];
+    return newEventId;
   },
 
   variableToIndex: function(variableString){
