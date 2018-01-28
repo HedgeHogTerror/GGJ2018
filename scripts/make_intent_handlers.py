@@ -24,12 +24,15 @@ def generate_model(events=None):
         ]
     ]
 
+    intent_set = set()
     for event in events:
         for intent in [ event['intent +'], event['Intent -'] ]:
-            intents.append({
-                'name': '{}_intent'.format(intent),
-                'samples': [intent],
-            })
+            if intent not in intent_set:
+                intents.append({
+                    'name': '{}_intent'.format(intent),
+                    'samples': [intent],
+                })
+                intent_set.add(intent)
 
     return {
         "interactionModel": {
@@ -60,7 +63,7 @@ def generate_functions(model=None):
         if 'AMAZON' not in name:
             function_output = '\n'.join([
                 "'{}': function () {{".format(name),
-                "   intent_samples = new Array({});".format(samples),
+                "   var intent_samples = new Array({});".format(samples),
                 "   this.emitWithState('VerifyTheCurrentIntent', intent_samples);",
                 "}",
             ])
