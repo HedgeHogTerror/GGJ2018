@@ -44,7 +44,7 @@ def generate_model(events):
     return {
         "interactionModel": {
             "languageModel": {
-                "invocationName": "The Hands of an Angry God",
+                "invocationName": "god",
                 "intents": intents,
             },
         }
