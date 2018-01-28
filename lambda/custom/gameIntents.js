@@ -8,9 +8,25 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   // currenteventid
   // currentAge
   // array of eventIds to exclude from next roll
-  this.emit(':ask', Data.GameData.randomEvent().intro);
+
+  var randomEvent = Data.GameData.randomEvent();
+
+  var variable = randomEvent.variable;
+
+  this.attributes['currentVariable'] = variable;
+
+  this.emit(':ask', "Epsilon. " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] );
 },
 //TBD These shall be generated....
+
+'PlusIntent': function () {
+    this.context.GameData.message = 'Good things happening...';
+    this.emitWithState('VerifyTheCurrentIntent');
+},
+'MinusIntent': function () {
+  this.context.GameData.message = 'Bad things happening...';
+  this.emitWithState('VerifyTheCurrentIntent');
+},
 'CatPosIntent': function () {
     this.context.GameData.message = 'positive blah...';
     this.emitWithState('VerifyTheCurrentIntent');
