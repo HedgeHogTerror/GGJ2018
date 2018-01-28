@@ -40,7 +40,7 @@ var GameData = {
 
     var d = this.returnDescription(randomD, randomAge, randomSign);
 
-    return "hey iguana, " + ". age " + randomAge + ". sign " + randomSign + ". " +d;
+    return "hey kanga. " + ". variable: " + this.variableDescriptions[randomD].variable + ". age " + randomAge + ". sign " + randomSign + ". " +d;
   },
 
   returnDescription: function(variableIndex, age, sign){
