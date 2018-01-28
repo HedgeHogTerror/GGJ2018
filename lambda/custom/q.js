@@ -5,8 +5,8 @@ var q = [
         "intro": "Oh Holy One, my pet cat makes me sneeze and choke, but I care for her deeply. What should I do? Should I love her or leave her?",
         "iplus": "love",
         "iminus": "leave",
-        "resultplus": "The woman says, \"Your word is law, holy one. I will suffer for my dear cat.",
-        "resultminus": "The woman says, \"Thank you for your just decision. I will tell the world that cats are bad."
+        "resultplus": "The woman says, \"Your word is law, holy one. I will suffer for my dear cat.\"",
+        "resultminus": "The woman says, \"Thank you for your just decision. I will tell the world that cats are bad.\" "
     },
     {
         "eventname": "Cats 2",
@@ -14,7 +14,7 @@ var q = [
         "intro": "O Majestic One, cats disgust me. They are cruel and withhold affection from me. But my father loves cats. Who is right? Are cats cruel or kind?",
         "iplus": "kind",
         "iminus": "cruel",
-        "resultplus": "The woman says, \"Thank you for your help, Holy One. I will learn to love a cat.",
+        "resultplus": "The woman says, \"Thank you for your help, Holy One. I will learn to love a cat.\"",
         "resultminus": "The woman goes home and solemnly places her father's cat in the garbage."
     },
     {
@@ -24,7 +24,7 @@ var q = [
         "iplus": "good",
         "iminus": "bad",
         "resultplus": "The man hangs his head in sorrow, and goes forth to wash his hair.",
-        "resultminus": "The man stands tall and proud. He says, \"I will spread your hair care law, O Lord!"
+        "resultminus": "The man stands tall and proud. He says, \"I will spread your hair care law, O Lord!\""
     },
     {
         "eventname": "Shampoo 2",
@@ -32,7 +32,7 @@ var q = [
         "intro": "Oh Almighty God, my husband drinks shampoo straight from the bottle. I think this is very bad. Am I right, or am I wrong?",
         "iplus": "wrong",
         "iminus": "right",
-        "resultplus": "This woman seems surprised. She says, \"If you think it is a good idea, my lord!",
+        "resultplus": "This woman seems surprised. She says, \"If you think it is a good idea, my lord!\"",
         "resultminus": "The woman seems pleased. She tells everyone she meets about your shampoo, opinions."
     },
     {
@@ -41,8 +41,8 @@ var q = [
         "intro": "O Lord, my wife hates pumpkins, but I adore them. She calls them, \"horrid orbs,\" but I call them \"<phoneme alphabet=\"ipa\" ph=\"\u02c8bl\u025bs\u0259d\">blessed</phoneme> orbs.\" Which of us is right? Are they horrid, or <phoneme alphabet=\"ipa\" ph=\"\u02c8bl\u025bs\u0259d\">blessed</phoneme>?",
         "iplus": "blessed",
         "iminus": "horrid",
-        "resultplus": "The man walks away with a beaming smile on his round, orange face. He cries, \"O <phoneme alphabet=\"ipa\" ph=\"\u02c8bl\u025bs\u0259d\">blessed</phoneme> day!",
-        "resultminus": "The man walks away with a deep frown on his round orange face. He sighs, \"What a horrid day!"
+        "resultplus": "The man walks away with a beaming smile on his round, orange face. He cries, \"O <phoneme alphabet=\"ipa\" ph=\"\u02c8bl\u025bs\u0259d\">blessed</phoneme> day!\"",
+        "resultminus": "The man walks away with a deep frown on his round orange face. He sighs, \"What a horrid day!\""
     },
     {
         "eventname": "Pumpkins 2",
@@ -50,8 +50,8 @@ var q = [
         "intro": "Almighty Lord, we have all been arguing: is it really a terrible sin to eat a pumpkin? They are very weird inside, and they make us nervous. Is it a sin, or is it okay?",
         "iplus": "okay",
         "iminus": "sin",
-        "resultplus": "The priest looks very relieved. He says, \"That's good. We were worried that if we ate gross things, we would become gross too.",
-        "resultminus": "The priest tries to remain calm. He says, \"We will do your bidding, O god."
+        "resultplus": "The priest looks very relieved. He says, \"That's good. We were worried that if we ate gross things, we would become gross too.\"",
+        "resultminus": "The priest tries to remain calm. He says, \"We will do your bidding, O god.\""
     },
     {
         "eventname": "Pumpkins 3",
@@ -59,8 +59,8 @@ var q = [
         "intro": "O God on HIgh, my son brought home his new bride... but it was a pumpkin!! Is it a sin for him to marry a pumpkin, or is it okay?",
         "iplus": "okay",
         "iminus": "sin",
-        "resultplus": "The man seems worried. He says, \"I fear she will try to take advantage of my dear son, but I will do your bidding.",
-        "resultminus": "The man nods solemnly. He says, \"So be it, God Almighty. Pumpkin marriage is now banned in this land."
+        "resultplus": "The man seems worried. He says, \"I fear she will try to take advantage of my dear son, but I will do your bidding.\"",
+        "resultminus": "The man nods solemnly. He says, \"So be it, God Almighty. Pumpkin marriage is now banned in this land.\""
     },
     {
         "eventname": "Trash 1",
@@ -96,7 +96,7 @@ var q = [
         "iplus": "humility",
         "iminus": "confidence",
         "resultplus": "The figure bows her head, overcome by your tremendous wisdom.",
-        "resultminus": "Yes,\" says the woman. \"He earned his muscles through hard work. He is right to be proud."
+        "resultminus": "\"Yes,\" says the woman. \"He earned his muscles through hard work. He is right to be proud.\""
     },
     {
         "eventname": "Spicy 1",
@@ -122,8 +122,8 @@ var q = [
         "intro": "O Lord, My son asked me whether the blue sky he sees is the same blue I see. How can I know? Do we all see blue the same, or different?",
         "iplus": "same",
         "iminus": "different",
-        "resultplus": "The man nods. He says, \"That makes sense. Objective reality is truly real.",
-        "resultminus": "The man's eyes widen. He says, \"So we do not experience the same reality? How disturbing!"
+        "resultplus": "The man nods. He says, \"That makes sense. Objective reality is truly real.\"",
+        "resultminus": "The man's eyes widen. He says, \"So we do not experience the same reality? How disturbing!\""
     },
     {
         "eventname": "Objective 2",
@@ -131,8 +131,8 @@ var q = [
         "intro": "O Lord, I have a brain puzzler for you, the brain genius. Is objective truth real, or a lie?",
         "iplus": "real",
         "iminus": "lie",
-        "resultplus": "The nerd nods his head. He says, \"I agree. Objective truth is real.",
-        "resultminus": "The nerd is shocked. But he says, \"If you say so, holy one, it must be true."
+        "resultplus": "The nerd nods his head. He says, \"I agree. Objective truth is real.\"",
+        "resultminus": "The nerd is shocked. But he says, \"If you say so, holy one, it must be true.\""
     },
     {
         "eventname": "Ice Cream 1",
@@ -140,8 +140,8 @@ var q = [
         "intro": "O Majestic lord, i ate a large amount of ice cream and it gave me a terrible headache. I now fear ice cream, but my family mocks me. Am I right to fear it? Or am I wrong?",
         "iplus": "wrong",
         "iminus": "right",
-        "resultplus": "The supplicant looks dejected. She says, \"I will eat ice cream if you say I must, O Holy One.",
-        "resultminus": "The supplicant smiles. She says, \"I knew I was right to fear the ice food."
+        "resultplus": "The supplicant looks dejected. She says, \"I will eat ice cream if you say I must, O Holy One.\"",
+        "resultminus": "The supplicant smiles. She says, \"I knew I was right to fear the ice food.\""
     },
     {
         "eventname": "Ice Cream 2",
@@ -149,8 +149,8 @@ var q = [
         "intro": "O Everlasting One, for my child's birthday I spent my whole paycheck on a rare banquet of iced cream. But she wept and wailed, saying that ice cream is not to her liking. Who is right? Is ice cream good or bad?",
         "iplus": "good",
         "iminus": "bad",
-        "resultplus": "The father says, \"I understand, holy one. I shall force my child to eat the iced creams.",
-        "resultminus": "The father bows and says, \"I shall never again feed my child the cursed iced creams."
+        "resultplus": "The father says, \"I understand, holy one. I shall force my child to eat the iced creams.\"",
+        "resultminus": "The father bows and says, \"I shall never again feed my child the cursed iced creams.\""
     },
     {
         "eventname": "Hawaiian 1",
@@ -158,7 +158,7 @@ var q = [
         "intro": "O powerful deity, my father puts both pineapple and ham upon his pizza. The neighbors say, this is a devil's food. Who is right? Is my father's pizza forbidden, or allowed?",
         "iplus": "allowed",
         "iminus": "forbidden",
-        "resultplus": "The boy agrees. He says, \"I love this pizza. We shall eat it always.",
+        "resultplus": "The boy agrees. He says, \"I love this pizza. We shall eat it always.\"",
         "resultminus": "The old man is punished. his pizzas are thrown into the river."
     },
     {
@@ -168,7 +168,7 @@ var q = [
         "iplus": "just",
         "iminus": "unjust",
         "resultplus": "The laborer nods. He goes forth to eat pineapple and ham together, even though it brings him great pain.",
-        "resultminus": "The laborer looks pleased. He says, \"I will tell my masters that this pizza is a sin."
+        "resultminus": "The laborer looks pleased. He says, \"I will tell my masters that this pizza is a sin.\""
     },
     {
         "eventname": "Numbers 1",
@@ -194,8 +194,8 @@ var q = [
         "intro": "O Holy One, my sister and I sleep in the same room. She prefers a bright night light in the darkness. However, I do not. Which of us is right? Should the night be light, or should it be dark?",
         "iplus": "light",
         "iminus": "dark",
-        "resultplus": "The girl sighs. She says, \"I will try to learn to sleep in the blazing light, O Lord.",
-        "resultminus": "The girl looks triumphant. She says, \"I knew that my opinions were right and just, O Lord."
+        "resultplus": "The girl sighs. She says, \"I will try to learn to sleep in the blazing light, O Lord.\"",
+        "resultminus": "The girl looks triumphant. She says, \"I knew that my opinions were right and just, O Lord.\""
     },
     {
         "eventname": "Light 2",
@@ -203,8 +203,8 @@ var q = [
         "intro": "O Great and Powerful One, I am very frightened of the dark, so I burn a light in my bedroom at all hours. However, my wife says that it keeps her awake. Which of us is right? Should our night be light, or should it be dark?",
         "iplus": "light",
         "iminus": "dark",
-        "resultplus": "The man seems gleeful. He says, \"I will tell my wife it is just and right to sleep with the lights on.",
-        "resultminus": "The man looks crushed. He says, \"I must then lean on your holy support to survive the darkness of the night."
+        "resultplus": "The man seems gleeful. He says, \"I will tell my wife it is just and right to sleep with the lights on.\"",
+        "resultminus": "The man looks crushed. He says, \"I must then lean on your holy support to survive the darkness of the night.\""
     },
     {
         "eventname": "Elfs 1",
@@ -212,8 +212,8 @@ var q = [
         "intro": "O powerful one, when I misplace my toys, my mother always says that an elf must have moved them. Is my mother right? Are <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme> real, or, a lie?",
         "iplus": "real",
         "iminus": "lie",
-        "resultplus": "The little boy seems terrified. He says, \"I must go and protect my belongings, from <prosody pitch=\"x-high\">the <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme></prosody>!",
-        "resultminus": "The little boy seems relieved. He says, \"Thank you, holy one. It was a sin for my mother to lie like this."
+        "resultplus": "The little boy seems terrified. He says, \"I must go and protect my belongings, from <prosody pitch=\"x-high\">the <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme></prosody>!\"",
+        "resultminus": "The little boy seems relieved. He says, \"Thank you, holy one. It was a sin for my mother to lie like this.\""
     },
     {
         "eventname": "Elfs 2",
@@ -221,7 +221,7 @@ var q = [
         "intro": "O great and powerful god, one of my classmates says that elfs are real, and that all my troubles are due to them. However, this seems very false to me. Are <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme> real, or a lie?",
         "iplus": "real",
         "iminus": "lie",
-        "resultplus": "The little girl is terrified. She says, \"So all my troubles, were due to <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme>! How horrible!",
+        "resultplus": "The little girl is terrified. She says, \"So all my troubles, were due to <phoneme alphabet=\"ipa\" ph=\"\u025blfs\">elfs</phoneme>! How horrible!\"",
         "resultminus": "The little girl leaves this place and goes to denounce her classmate in the public square. All is well."
     },
     {
@@ -231,7 +231,7 @@ var q = [
         "iplus": "food",
         "iminus": "foe",
         "resultplus": "The man cheerfully goes forth and forces his brother to eat the flesh of lobsters.",
-        "resultminus": "The man looks sad. He says, \"I will obey you, even though I love the <emphasis>sweet flesh</emphasis> of the <emphasis>sea roach!</emphasis>"
+        "resultminus": "The man looks sad. He says, \"I will obey you, even though I love the <emphasis>sweet flesh</emphasis> of the <emphasis>sea roach!</emphasis>\""
     },
     {
         "eventname": "Lobster 2",
@@ -239,8 +239,8 @@ var q = [
         "intro": "O great one, the creature called the lobster is a foul beast that has green curds for brains. But my <phoneme alphabet =\"ipa\" ph=\"b\u026a.\u02c8l\u028cv.\u026ad\">beloved</phoneme> refuses to marry me unless I join her to eat them. What is right? Are lobsters allowed, or forbidden?",
         "iplus": "allowed",
         "iminus": "forbidden",
-        "resultplus": "The man looks dejected. He sighs, \"I will learn to eat the lobster brain.",
-        "resultminus": "The man looks very pleased. He says, \"I will tell my <phoneme alphabet =\"ipa\" ph=\"b\u026a.\u02c8l\u028cv.\u026ad\">beloved</phoneme> what you have said. Now she will be forced to marry me!"
+        "resultplus": "The man looks dejected. He sighs, \"I will learn to eat the lobster brain.\"",
+        "resultminus": "The man looks very pleased. He says, \"I will tell my <phoneme alphabet =\"ipa\" ph=\"b\u026a.\u02c8l\u028cv.\u026ad\">beloved</phoneme> what you have said. Now she will be forced to marry me!\""
     },
     {
         "eventname": "Knuckles 1",
@@ -302,8 +302,8 @@ var q = [
         "intro": "Divine Lord, the dentists tell us that we must floss, but flossing sucks real hard. Is flossing <emphasis>good,</emphasis> or is it <emphasis>bogus</emphasis>?",
         "iplus": "good",
         "iminus": "bogus",
-        "resultplus": "The worshiper sighs. He says, \"I guess it only takes like, 30 seconds. I will do as you command.",
-        "resultminus": "The worshiper jumps with joy! He says, \"Thank you, my lord!"
+        "resultplus": "The worshiper sighs. He says, \"I guess it only takes like, 30 seconds. I will do as you command.\"",
+        "resultminus": "The worshiper jumps with joy! He says, \"Thank you, my lord!\""
     },
     {
         "eventname": "Flossing 2",
@@ -312,7 +312,7 @@ var q = [
         "iplus": "try harder",
         "iminus": "give up",
         "resultplus": "The dentist says, \"I will redouble my efforts. Thank you, my lord.\" He leaves a free toothbrush on your altar.",
-        "resultminus": "The dentist sighs and says, \"If I'm honest with you, I don't even floss, myself."
+        "resultminus": "The dentist sighs and says, \"If I'm honest with you, I don't even floss, myself.\""
     },
     {
         "eventname": "Toes 1",
@@ -329,7 +329,7 @@ var q = [
         "intro": "O Lord, my husband often takes his socks off and picks at his toes. I believe it is gross, but he believes it is natural. Who is right? Are toes polite, or are they nasty?",
         "iplus": "polite",
         "iminus": "nasty",
-        "resultplus": "The woman sighs. She says, \"I will learn to live with my husband's toes.",
+        "resultplus": "The woman sighs. She says, \"I will learn to live with my husband's toes.\"",
         "resultminus": "The woman goes home and commands her husband to hide his terrible feet. And of course, he must comply."
     },
     {
@@ -347,8 +347,8 @@ var q = [
         "intro": "O great and powerful one, two demons came to me in a dream and said two words of power to me. Which one is the <phoneme alphabet=\"ipa\" ph=\"\u02c8bl\u025bs\u0259d\">blessed</phoneme> word: <say-as interpret-as=\"interjection\">wowza</say-as> or <say-as interpret-as=\"interjection\">yowza</say-as>",
         "iplus": "wowza",
         "iminus": "yowza",
-        "resultplus": "The man says, \"So be it. The word of fate is <say-as interpret-as=\"interjection\">wowza</say-as>.",
-        "resultminus": "The man says, \"So be it. The word of fate is <say-as interpret-as=\"interjection\">yowza</say-as>."
+        "resultplus": "The man says, \"So be it. The word of fate is <say-as interpret-as=\"interjection\">wowza</say-as>.\"",
+        "resultminus": "The man says, \"So be it. The word of fate is <say-as interpret-as=\"interjection\">yowza</say-as>.\""
     },
     {
         "eventname": "Snakes 1",
@@ -357,7 +357,7 @@ var q = [
         "iplus": "fear",
         "iminus": "snakes",
         "resultplus": "The sage nods. Snakes are not so bad. He was afraid that he should be afraid of being afraid.",
-        "resultminus": "The sage trembles. \"When I see a snake, I say, gross! not because I am disgusted, but because I am afraid."
+        "resultminus": "The sage trembles. \"When I see a snake, I say, gross! not because I am disgusted, but because I am afraid.\""
     },
     {
         "eventname": "Snakes 2",
@@ -374,8 +374,8 @@ var q = [
         "intro": "O powerful lord, what waits for us after death? Should we, <say-as interpret-as=\"interjection\">watch out</say-as>! Or should we say, <say-as interpret-as=\"interjection\">hurray</say-as>?",
         "iplus": "hurray",
         "iminus": "watch out",
-        "resultplus": "The woman nods and says, \"As you wish, o powerful one. We will form a religion of death.",
-        "resultminus": "The woman nods and says, \"As you wish, o majestic one. We will fear death."
+        "resultplus": "The woman nods and says, \"As you wish, o powerful one. We will form a religion of death.\"",
+        "resultminus": "The woman nods and says, \"As you wish, o majestic one. We will fear death.\""
     },
     {
         "eventname": "Death 2",
@@ -383,8 +383,8 @@ var q = [
         "intro": "O great one, what afterlife have you created for us? Should I accept my death, or should I fear it?",
         "iplus": "accept",
         "iminus": "fear",
-        "resultplus": "The man nods his ancient head. He says, \"If that's what you say, then I am excited to die.",
-        "resultminus": "The man nods his ancient head. \"I understand, great one. I will begin the search for immortality immediately."
+        "resultplus": "The man nods his ancient head. He says, \"If that's what you say, then I am excited to die.\"",
+        "resultminus": "The man nods his ancient head. \"I understand, great one. I will begin the search for immortality immediately.\""
     }
 ];
 
