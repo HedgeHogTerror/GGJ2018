@@ -45,10 +45,10 @@ var GameData = {
 
   randomEvent: function(){
     var length = this.questionEvents.length;
-    
+
     var r = this.getRandomInt(0, length);
 
-    var randomQuestionEvent = questionEvents[r];
+    var randomQuestionEvent = this.questionEvents[r];
 
     return randomQuestionEvent;
   },

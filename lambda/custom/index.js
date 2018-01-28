@@ -28,11 +28,8 @@ const newSessionHandlers = {
         //     this.attributes['currentEventMessage'] = '';
         // }
 
+
         this.handler.state = Data.GameConst.States.SETUP;
-        this.response.speak('Cheers. ' + Data.GameData.randomDescription())
-        //possible data save
-          // you have created/?destroyed + this.attributes['gamesPlayed'].toString() + ' worlds')
-             .listen('Say yes to start a world or no to quit.');
-        this.emit(':responseReady');
+        this.emit(':ask', 'Play game?', 'Say yes to start a world or no to quit.')
     }
 };

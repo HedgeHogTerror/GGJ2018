@@ -4,7 +4,11 @@ const Data = require('./gamedata');
 const Alexa = require("alexa-sdk")
 const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
 'BeginningIntent': function (){
-  this.emit(':ask', 'this is the introduction');
+  //attributes to be set:
+  // currenteventid
+  // currentAge
+  // array of eventIds to exclude from next roll
+  this.emit(':ask', Data.GameData.randomEvent().intro);
 },
 //TBD These shall be generated....
 'CatPosIntent': function () {
