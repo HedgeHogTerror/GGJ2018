@@ -25,9 +25,9 @@ var GameData = {
     this.questionEvents = require('./q').q;
     this.variableDescriptions = require('./d').d;
 
-    this.BELL_SOUND = " BELL SOUNDS. ";
-    this.AGE_END_SOUND = " END OF AGE. ";
-    this.FOOTSTEPS_SOUND = " STEP STEP. ";
+    this.BELL_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/bell.mp3\'";
+    this.AGE_END_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/Age_End.mp3\'";
+    this.FOOTSTEPS_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/supplicant.mp3\'";
   },
 
   randomDescription: function(){
@@ -116,13 +116,13 @@ var GameData = {
       case 2:
         return ' CASTLE_SOUND. ';*/
       case 3:
-        return ' STEAM_SOUND. ';
+        return '<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/steam.mp3\'';
       case 4:
-        return ' SKYSCRAPER_SOUND. ';
+        return '<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/modern.mp3\'';
       case 5:
-        return ' CYBER_SOUND. ';
+        return '<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/cyberpunk.mp3\'';
       case 6:
-        return ' INTERSTELLAR_SOUND. ';
+        return '<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/scifi.mp3\'';
       default:
         return '';
     }
