@@ -32,7 +32,27 @@ var GameData = {
 
     var l = this.variableDescriptions.length;
 
-    return "hello aardvark, num is "+this.getRandomInt(0,l);
+    var randomD = this.getRandomInt(0,l);
+
+    var randomAge = this.getRandomInt(2,6);
+
+    var variableRow = this.variableDescriptions[randomD];
+
+    var desc = " no age was found ";
+
+    if(randomAge == 2){
+        desc = variableRow['agedesc2plus'];
+    }else if(randomAge == 3){
+        desc = variableRow['agedesc3plus'];
+    }else if(randomAge == 4){
+        desc = variableRow['agedesc4plus'];
+    }else if(randomAge == 5){
+        desc = variableRow['agedesc5plus'];
+    }else if(randomAge == 6){
+        desc = variableRow['agedesc6plus'];
+    }
+
+    return "hello dog,  "+desc;
   },
 
   getRandomInt: function(min, max) {
