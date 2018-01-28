@@ -22,13 +22,12 @@ var GameData = {
 
     this.maxAges = this.isDebug ? 100000000 : 6;
 
-      // randomize the question events.
-      var questionEvents = require('./q').q;
-      this.questionEvents = questionEvents;
-      this.questionIndex = 0;
+    this.questionEvents = require('./q').q;
+    this.variableDescriptions = require('./d').d;
 
-      var variableDescriptions = require('./d').d;
-      this.variableDescriptions = variableDescriptions;
+    this.BELL_SOUND = " BELL SOUNDS. ";
+    this.AGE_END_SOUND = " END OF AGE. ";
+    this.FOOTSTEPS_SOUND = " STEP STEP. ";
   },
 
   randomDescription: function(){
@@ -110,6 +109,25 @@ var GameData = {
     return vDict;
   },
 
+  returnCurrentAgeSound: function(age) {
+    switch (age) {
+      /*case 1:
+        return ' STONE_SOUND. ';
+      case 2:
+        return ' CASTLE_SOUND. ';*/
+      case 3:
+        return ' STEAM_SOUND. ';
+      case 4:
+        return ' SKYSCRAPER_SOUND. ';
+      case 5:
+        return ' CYBER_SOUND. ';
+      case 6:
+        return ' INTERSTELLAR_SOUND. ';
+      default:
+        return '';
+    }
+  },
+
   returnCurrentAgeDescription: function(age){
     if(age==1){
         return "It is the age of stone.";
@@ -152,13 +170,11 @@ var GameData = {
 
     var rint = this.getRandomInt(0, length-1);
 
-    return approaches[rint] + " . ";
+    return this.FOOTSTEPS_SOUND + ". " + approaches[rint] + " . ";
   },
 
   returnDescription: function(variableIndex, age, sign){
-
     var desc = " ";
-
     var variableRow = this.variableDescriptions[variableIndex];
 
     if(age == 2){
