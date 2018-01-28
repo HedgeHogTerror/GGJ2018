@@ -64,8 +64,7 @@ var GameData = {
         }
     }
 
-
-    return l;
+    return -1; // not found
   },
 
   returnDescription: function(variableIndex, age, sign){

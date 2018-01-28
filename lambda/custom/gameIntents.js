@@ -13,11 +13,11 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
 
   var variable = randomEvent.variable;
 
-  var num = Data.GameData.variableToIndex("cats");
+  var num = Data.GameData.variableToIndex(variable);
 
-  this.attributes['currentVariable'] = variable;
+  this.attributes['currentVariable'] = num;
 
-  this.emit(':ask', "Epsilon. num: " + num +". " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] +". Say love or leave." );
+  this.emit(':ask', "Omega. num: " + num +". " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] +". Say love or leave." );
 },
 //TBD These shall be generated....
 
@@ -30,11 +30,10 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatPosIntent': function () {
-  //this.attributes['currentVariable'];
 
-  //Data.GameData.returnDescription(randomD, randomAge, randomSign);
+  var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], 2, 1);
 
-    this.context.GameData.message = 'positive blah...';
+    this.context.GameData.message = pos;
     this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatNegIntent': function () {
