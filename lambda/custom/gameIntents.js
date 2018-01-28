@@ -13,7 +13,7 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   // important initialization tasks to do once
   var vDict = Data.GameData.returnNewVariableDictionary();
   this.attributes['vDict'] = vDict;
-  this.attributes['currentAge'] = 1;
+  this.attributes['currentAge'] = 0;
 
   // generate a new event // the same crap we do every time
   var randomEvent = Data.GameData.randomEvent();
@@ -59,6 +59,15 @@ var neg = this.attributes['currentEvent'].resultminus;
 },
 'VerifyTheCurrentIntent': function (){
 
+  // generate a new event // the same crap we do every time
+  var randomEvent = Data.GameData.randomEvent();
+  var variable = randomEvent.variable;
+  var num = Data.GameData.variableToIndex(variable);
+  this.attributes['currentVariableString'] = variable;
+  this.attributes['currentVariable'] = num;
+  this.attributes['currentAge'] += 1;
+  this.attributes['currentEvent'] = randomEvent;
+
   // tell a big thing
   var vDictionary = this.attributes['vDict'];
   var description = ". Here are some things about now. ";
@@ -72,18 +81,12 @@ var neg = this.attributes['currentEvent'].resultminus;
       );
   }
 
-  // generate a new event // the same crap we do every time
-  var randomEvent = Data.GameData.randomEvent();
-  var variable = randomEvent.variable;
-  var num = Data.GameData.variableToIndex(variable);
-  this.attributes['currentVariableString'] = variable;
-  this.attributes['currentVariable'] = num;
-  this.attributes['currentAge'] += 1;
-  this.attributes['currentEvent'] = randomEvent;
+  description += " . ";
 
   if(this.context.GameData.currentEvent == 0){ //map to correct...
     this.emit(':ask', this.context.GameData.message 
-      + " . Time passes. Age is " +  this.attributes['currentAge']
+      + " . Time passes. " //" Age is " +  this.attributes['currentAge']
+      + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
       + description
       + randomEvent.intro,
        randomEvent.intro);

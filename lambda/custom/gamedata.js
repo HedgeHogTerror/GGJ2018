@@ -81,6 +81,25 @@ var GameData = {
     return vDict;
   },
 
+  returnCurrentAgeDescription: function(age){
+    if(age==1){
+        return "It is the age of stone.";
+    }
+    else if(age==2){
+        return "One thousand years pass. It is the age of noble castles.";
+    }else if(age==3){
+        return "One thousand years pass. It is the age of steam.";
+    }else if(age==4){
+        return "One thousand years pass. It is the age of skyscrapers.";
+    }else if(age==5){
+        return "One thousand years pass. It is the age... of cyber.";
+    }else if(age==6){
+        return "One thousand years pass. It is the age of interstellar flight.";
+    }else{
+        return " . This is an unrecognized age... It's age " + age + " . ";
+    }
+  },
+
   returnDescription: function(variableIndex, age, sign){
 
     var desc = " ";
