@@ -38,21 +38,43 @@ var GameData = {
 
     var variableRow = this.variableDescriptions[randomD];
 
-    var desc = " no age was found ";
+    var desc = " neutral ";
+
+    var randomSign = this.getRandomInt(-1,1);
 
     if(randomAge == 2){
-        desc = variableRow['agedesc2plus'];
+        if(randomSign == 1){
+           desc = variableRow['agedesc2plus'];
+        }else if(randomSign == -1){
+            desc = variableRow['agedesc2minus'];
+        }
     }else if(randomAge == 3){
-        desc = variableRow['agedesc3plus'];
+        if(randomSign == 1){
+           desc = variableRow['agedesc3plus'];
+        }else if(randomSign == -1){
+            desc = variableRow['agedesc3minus'];
+        }
     }else if(randomAge == 4){
-        desc = variableRow['agedesc4plus'];
+        if(randomSign == 1){
+           desc = variableRow['agedesc4plus'];
+        }else if(randomSign == -1){
+            desc = variableRow['agedesc4minus'];
+        }
     }else if(randomAge == 5){
-        desc = variableRow['agedesc5plus'];
+        if(randomSign == 1){
+           desc = variableRow['agedesc5plus'];
+        }else if(randomSign == -1){
+            desc = variableRow['agedesc5minus'];
+        }
     }else if(randomAge == 6){
-        desc = variableRow['agedesc6plus'];
+        if(randomSign == 1){
+           desc = variableRow['agedesc6plus'];
+        }else if(randomSign == -1){
+            desc = variableRow['agedesc6minus'];
+        }
     }
 
-    return "hello dog,  "+desc;
+    return "hey hippo, " + "variable " + variableRow['variable'] + ". age " + randomAge + " sign " + randomSign + " " +desc;
   },
 
   getRandomInt: function(min, max) {
