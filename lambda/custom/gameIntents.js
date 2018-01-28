@@ -70,30 +70,36 @@ var neg = this.attributes['currentEvent'].resultminus;
 
   // tell a big thing
   var vDictionary = this.attributes['vDict'];
-  var description = ". Here are some things about now. ";
+  var description = " ... ";//". Here are some things about now. ";
   for(var key in vDictionary){
     var value = vDictionary[key];
 
-    description += " . " + Data.GameData.returnDescription(
+    description += " ... " + Data.GameData.returnDescription(
        Data.GameData.variableToIndex(key),
       this.attributes['currentAge'],
       value
       );
   }
 
-  description += " . ";
+  description += " ... ";
 
   // random worshipper entrance
   description += Data.GameData.returnRandomWorshipperText();
 
-  // execute
-  if(this.context.GameData.currentEvent == 0){ //map to correct...
-    this.emit(':ask', this.context.GameData.message 
-      + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
-      + description
-      + randomEvent.intro,
-       randomEvent.intro);
-  } else this.emit('Unhandled');
+  if(this.attributes['currentAge'] >= 7){ // end the game
+    this.emit(':tell', "You survey all that you have done. And you see. That it is good. The end.");
+   }
+  else{ // keep playing
+    // execute
+    if(this.context.GameData.currentEvent == 0){ //map to correct...
+      this.emit(':ask', this.context.GameData.message 
+        + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+        + description
+        + randomEvent.intro,
+         randomEvent.intro);
+    } else this.emit('Unhandled');
+  }
+
 
   // TBD check for end state
 },
