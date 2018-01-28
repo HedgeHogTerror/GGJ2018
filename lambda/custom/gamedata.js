@@ -53,6 +53,19 @@ var GameData = {
     return randomQuestionEvent;
   },
 
+  variableToIndex: function(variableString){
+    var l = this.variableDescriptions.length;
+
+    //for(i = 0; i < l; i++){
+        //if(variableString == this.variableDescriptions[i].variable){
+        //    return i;
+        //}
+    //}
+
+
+    return l;
+  },
+
   returnDescription: function(variableIndex, age, sign){
 
     var desc = " neutral ";
