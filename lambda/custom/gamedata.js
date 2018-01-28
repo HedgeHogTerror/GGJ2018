@@ -45,17 +45,90 @@ var GameData = {
 
   randomEvent: function(){
     var length = this.questionEvents.length;
-    
+
     var r = this.getRandomInt(0, length);
 
-    var randomQuestionEvent = questionEvents[r];
+    var randomQuestionEvent = this.questionEvents[r];
 
     return randomQuestionEvent;
   },
 
+  variableToIndex: function(variableString){
+    var l = this.variableDescriptions.length;
+
+    var i;
+
+    for(i = 0; i < l; i++){
+        if(variableString == this.variableDescriptions[i].variable){
+            return i;
+        }
+    }
+
+    return -1; // not found
+  },
+
+  returnNewVariableDictionary: function(){
+    var l = this.variableDescriptions.length;
+
+    var vDict = new Object();
+
+    var i;
+    for(i = 0; i < l; i++){
+        vDict[this.variableDescriptions[i].variable] = 0;
+    }
+
+    // new vDict where everything is 0 to start
+    return vDict;
+  },
+
+  returnCurrentAgeDescription: function(age){
+    if(age==1){
+        return "It is the age of stone.";
+    }
+    else if(age==2){
+        return "One thousand years pass. It is the age of noble castles.";
+    }else if(age==3){
+        return "One thousand years pass. It is the age of steam.";
+    }else if(age==4){
+        return "One thousand years pass. It is the age of skyscrapers.";
+    }else if(age==5){
+        return "One thousand years pass. It is the age... of cyber.";
+    }else if(age==6){
+        return "One thousand years pass. It is the age of interstellar flight.";
+    }else{
+        return " . This is an unrecognized age... It's age " + age + " . ";
+    }
+  },
+
+  returnRandomWorshipperText: function(){
+    var approaches = [
+    "A supplicant approaches your holy altar.",
+    "A worshiper begs for your wisdom.",
+    "A loyal follower creeps up to your altar.",
+    "A mortal shields their eyes from your radiance.",
+    "A devoted follower begs for your attention.",
+    "An awed worshiper kneels before you.",
+    "A dazed supplicant kisses your ancient altar.",
+    "A mortal crawls toward your holy presence.",
+    "A small figure bows to the ground.",
+    "Someone approaches your altar.",
+    "A worshiper glows in your holy presence.",
+    "Someone pleads for your wisdom.",
+    "Feet scrape the temple floor. Someone approaches.",
+    "Someone has come to learn from your wisdom.",
+    "A worshipper cowers in awe."
+    ];
+
+    var length = approaches.length;
+
+    var rint = this.getRandomInt(0, length);
+
+    return approaches[rint] + " . ";
+  },
+
   returnDescription: function(variableIndex, age, sign){
 
-    var desc = " neutral ";
+    var desc = " ";
 
     var variableRow = this.variableDescriptions[variableIndex];
 

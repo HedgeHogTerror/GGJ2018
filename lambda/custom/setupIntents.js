@@ -4,6 +4,7 @@ const Data = require('./gamedata');
 const Alexa = require("alexa-sdk")
 const setupHandlers = Alexa.CreateStateHandler(Data.GameConst.States.SETUP, {
 'AMAZON.YesIntent' : function () {
+  console.log("Intro Data?"+JSON.stringify(Data.GameConst));
   this.handler.state = Data.GameConst.States.EVENTS;
   this.emitWithState('BeginningIntent');
 },
