@@ -1,4 +1,12 @@
 var i = {
+'AMAZON.NoIntent': function () {
+   var intent_samples = new Array("no");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
+'AMAZON.YesIntent': function () {
+   var intent_samples = new Array("yes","okay");
+   this.emitWithState('VerifyTheCurrentIntent', intent_samples);
+},
 'love_intent': function () {
    var intent_samples = new Array("love");
    this.emitWithState('VerifyTheCurrentIntent', intent_samples);

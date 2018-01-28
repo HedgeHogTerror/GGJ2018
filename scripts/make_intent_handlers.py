@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import json
 import os
@@ -20,15 +20,15 @@ def generate_model(events):
     intents = [
         {
             'name': 'AMAZON.{}Intent'.format(amazon_name),
-            'samples': [],
+            'samples': samples,
         }
-        for amazon_name in [
-            'Cancel',
-            'Help',
-            'No',
-            'Yes',
-            'Stop',
-        ]
+        for amazon_name, samples in {
+            'Cancel': [],
+            'Help': [],
+            'No': ['no'],
+            'Yes': ['yes', 'okay'],
+            'Stop': [],
+        }.items()
     ]
 
     intent_set = set()
@@ -57,12 +57,13 @@ def generate_functions(model):
     for intent in intents:
         name = intent['name']
         samples = intent['samples']
+
         samples = ','.join([
             '"{}"'.format(sample)
             for sample in samples
         ])
 
-        if 'AMAZON' not in name:
+        if samples:
             function_output = '\n'.join([
                 "'{}': function () {{".format(name),
                 "   var intent_samples = new Array({});".format(samples),
