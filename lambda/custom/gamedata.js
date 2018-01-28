@@ -56,11 +56,13 @@ var GameData = {
   variableToIndex: function(variableString){
     var l = this.variableDescriptions.length;
 
-    //for(i = 0; i < l; i++){
-        //if(variableString == this.variableDescriptions[i].variable){
-        //    return i;
-        //}
-    //}
+    var i;
+
+    for(i = 0; i < l; i++){
+        if(variableString == this.variableDescriptions[i].variable){
+            return i;
+        }
+    }
 
 
     return l;
