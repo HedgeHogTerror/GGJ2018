@@ -16,28 +16,24 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   var num = Data.GameData.variableToIndex(variable);
 
   this.attributes['currentVariable'] = num;
+  this.attributes['currentAge'] = 1;
+  this.attributes['currentAge'] += 1;
 
   this.emit(':ask', "Omega. num: " + num +". " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] +". Say love or leave." );
 },
 //TBD These shall be generated....
 
-'PlusIntent': function () {
-    this.context.GameData.message = 'Good things happening...';
-    this.emitWithState('VerifyTheCurrentIntent');
-},
-'MinusIntent': function () {
-  this.context.GameData.message = 'Bad things happening...';
-  this.emitWithState('VerifyTheCurrentIntent');
-},
 'CatPosIntent': function () {
 
-  var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], 2, 1);
+  var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], 1);
 
     this.context.GameData.message = pos;
     this.emitWithState('VerifyTheCurrentIntent');
 },
 'CatNegIntent': function () {
-  this.context.GameData.message = 'negative blah...';
+  var neg = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], -1);
+
+  this.context.GameData.message = neg;
   this.emitWithState('VerifyTheCurrentIntent');
 },
 'PumpkinPosIntent': function () {
