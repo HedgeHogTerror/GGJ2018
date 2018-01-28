@@ -36,45 +36,52 @@ var GameData = {
 
     var randomAge = this.getRandomInt(2,6);
 
-    var variableRow = this.variableDescriptions[randomD];
+    var randomSign = this.getRandomInt(-1,1);
+
+    var d = this.returnDescription(randomD, randomAge, randomSign);
+
+    return "hey iguana, " + ". age " + randomAge + ". sign " + randomSign + ". " +d;
+  },
+
+  returnDescription: function(variableIndex, age, sign){
 
     var desc = " neutral ";
 
-    var randomSign = this.getRandomInt(-1,1);
+    var variableRow = this.variableDescriptions[variableIndex];
 
-    if(randomAge == 2){
-        if(randomSign == 1){
+    if(age == 2){
+        if(sign == 1){
            desc = variableRow['agedesc2plus'];
-        }else if(randomSign == -1){
+        }else if(sign == -1){
             desc = variableRow['agedesc2minus'];
         }
-    }else if(randomAge == 3){
-        if(randomSign == 1){
+    }else if(age == 3){
+        if(sign == 1){
            desc = variableRow['agedesc3plus'];
-        }else if(randomSign == -1){
+        }else if(sign == -1){
             desc = variableRow['agedesc3minus'];
         }
-    }else if(randomAge == 4){
-        if(randomSign == 1){
+    }else if(age == 4){
+        if(sign == 1){
            desc = variableRow['agedesc4plus'];
-        }else if(randomSign == -1){
+        }else if(sign == -1){
             desc = variableRow['agedesc4minus'];
         }
-    }else if(randomAge == 5){
-        if(randomSign == 1){
+    }else if(age == 5){
+        if(sign == 1){
            desc = variableRow['agedesc5plus'];
-        }else if(randomSign == -1){
+        }else if(sign == -1){
             desc = variableRow['agedesc5minus'];
         }
-    }else if(randomAge == 6){
-        if(randomSign == 1){
+    }else if(age == 6){
+        if(sign == 1){
            desc = variableRow['agedesc6plus'];
-        }else if(randomSign == -1){
+        }else if(sign == -1){
             desc = variableRow['agedesc6minus'];
         }
     }
 
-    return "hey hippo, " + "variable " + variableRow['variable'] + ". age " + randomAge + " sign " + randomSign + " " +desc;
+    return desc;
   },
 
   getRandomInt: function(min, max) {
