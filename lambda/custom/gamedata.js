@@ -67,6 +67,20 @@ var GameData = {
     return -1; // not found
   },
 
+  returnNewVariableDictionary: function(){
+    var l = this.variableDescriptions.length;
+
+    var vDict = new Object();
+
+    var i;
+    for(i = 0; i < l; i++){
+        vDict[this.variableDescriptions[i].variable] = 0;
+    }
+
+    // new vDict where everything is 0 to start
+    return vDict;
+  },
+
   returnDescription: function(variableIndex, age, sign){
 
     var desc = " neutral ";

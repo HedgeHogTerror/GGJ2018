@@ -17,14 +17,15 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
   this.attributes['currentAge'] += 1;
   this.attributes['currentEvent'] = randomEvent;
 
-  this.emit(':ask', "Lip. num: " + num +". " + randomEvent.intro + ". Variable is " + this.attributes['currentVariable'] +". Say love or leave." );
+  Data.GameData.returnNewVariableDictionary();
+
+  this.emit(':ask', randomEvent.intro +". Say love or leave." );
 },
 //TBD These shall be generated....
 
 'CatPosIntent': function () {
 
 var pos = this.attributes['currentEvent'].resultplus;
-  //var pos = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], 1);
 
     this.context.GameData.message = pos;
     this.emitWithState('VerifyTheCurrentIntent');
@@ -32,7 +33,6 @@ var pos = this.attributes['currentEvent'].resultplus;
 'CatNegIntent': function () {
 
 var neg = this.attributes['currentEvent'].resultminus;
-  //var neg = Data.GameData.returnDescription(this.attributes['currentVariable'], this.attributes['currentAge'], -1);
 
   this.context.GameData.message = neg;
   this.emitWithState('VerifyTheCurrentIntent');
@@ -52,6 +52,14 @@ var neg = this.attributes['currentEvent'].resultminus;
   this.attributes['currentEvent'] = randomEvent;
   this.attributes['currentVariable'] = num;
   this.attributes['currentAge'] += 1;
+
+
+
+
+
+
+
+
 
   if(this.context.GameData.currentEvent == 0){ //map to correct...
     this.emit(':ask', this.context.GameData.message + " . Time passes . " + randomEvent.intro, randomEvent.intro);
