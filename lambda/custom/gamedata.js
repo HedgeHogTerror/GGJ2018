@@ -100,6 +100,32 @@ var GameData = {
     }
   },
 
+  returnRandomWorshipperText: function(){
+    var approaches = [
+    "A supplicant approaches your holy altar.",
+    "A worshiper begs for your wisdom.",
+    "A loyal follower creeps up to your altar.",
+    "A mortal shields their eyes from your radiance.",
+    "A devoted follower begs for your attention.",
+    "An awed worshiper kneels before you.",
+    "A dazed supplicant kisses your ancient altar.",
+    "A mortal crawls toward your holy presence.",
+    "A small figure bows to the ground.",
+    "Someone approaches your altar.",
+    "A worshiper glows in your holy presence.",
+    "Someone pleads for your wisdom.",
+    "Feet scrape the temple floor. Someone approaches.",
+    "Someone has come to learn from your wisdom.",
+    "A worshipper cowers in awe."
+    ];
+
+    var length = approaches.length;
+
+    var rint = this.getRandomInt(0, length);
+
+    return approaches[rint] + " . ";
+  },
+
   returnDescription: function(variableIndex, age, sign){
 
     var desc = " ";

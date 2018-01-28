@@ -83,9 +83,12 @@ var neg = this.attributes['currentEvent'].resultminus;
 
   description += " . ";
 
+  // random worshipper entrance
+  description += Data.GameData.returnRandomWorshipperText();
+
+  // execute
   if(this.context.GameData.currentEvent == 0){ //map to correct...
     this.emit(':ask', this.context.GameData.message 
-      + " . Time passes. " //" Age is " +  this.attributes['currentAge']
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
       + description
       + randomEvent.intro,
