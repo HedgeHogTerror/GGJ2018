@@ -15,7 +15,7 @@ var EVENTS_STATE = {
   // important initialization tasks to do once
   var vDict = Data.GameData.returnNewVariableDictionary();
   this.attributes['vDict'] = vDict;
-  this.attributes['currentAge'] = 0;
+  this.attributes['currentAge'] = 1;
   this.attributes['debugId'] = 0;
 
   // generate a new event // the same crap we do every time
@@ -25,8 +25,13 @@ var EVENTS_STATE = {
   this.attributes['currentEventId'] = randomEventId;
   this.attributes['currentEvent'] = randomEvent;
 
-  // emit
-  this.emit(':ask', randomEvent.intro);
+  var introduction = Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+    + " "
+    + Data.GameData.returnRandomWorshipperText()
+    + " "
+    + randomEvent.intro;
+
+  this.emit(':ask', introduction, randomEvent.intro);
 },
 
 'VerifyTheCurrentIntent': function (intentSamples){
