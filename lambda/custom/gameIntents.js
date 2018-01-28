@@ -35,13 +35,17 @@ var EVENTS_STATE = {
   var negativeOption = currentEvent.iminus;
   var variable = currentEvent.variable;
 
+  var responseText = "";
+
   // Validation
   var variableChange = 0;
   if (intentSamples.includes(positiveOption)) {
     // TODO cap it?
     variableChange = 1;
+    responseText = currentEvent.resultplus;
   } else if (intentSamples.includes(negativeOption)) {
     variableChange = -1;
+    responseText = currentEvent.resultminus;
   } else {
     // Ugh, re-emit current state description
   }
@@ -85,14 +89,12 @@ var EVENTS_STATE = {
     this.emit(':tell', "You survey all that you have done. And you see. That it is good. The end.");
    }
   else{ // keep playing
-    // execute
-    if(this.context.GameData.currentEvent == 0){ //map to correct...
-      this.emit(':ask', this.context.GameData.message
-        + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
-        + description
-        + randomEvent.intro,
-         randomEvent.intro);
-    } else this.emit('Unhandled');
+    this.emit(':ask', responseText
+      + " "
+      + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+      + description
+      + randomEvent.intro,
+       randomEvent.intro);
   }
 
 
