@@ -56,4 +56,24 @@ const gameHandlers = Alexa.CreateStateHandler(Data.GameConst.States.EVENTS, {
 }
 });
 
+function newEventId(context) {
+    events = q;
+    bad_events = context.eventsBlacklist;
+
+    possibleEvents = new Array(events.length);
+    possibleEvents.forEach(function(item, index, array) {
+        possibleEvents[index] = index;
+    });
+    badEvents.forEach(function(item, index, array) {
+        badEvents[index] = NaN;
+    });
+
+    possibleEvents = possibleEvents.filter(index => !isNaN(index));
+
+    newEventId = Math.floor(Math.random() * Math.floor(possibleEvents.length));
+    context.eventsBlacklist.add(newEventId);
+
+    return newEventId;
+}
+
 module.exports = gameHandlers;
