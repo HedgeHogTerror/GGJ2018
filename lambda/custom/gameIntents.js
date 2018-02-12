@@ -25,7 +25,6 @@ var EVENTS_STATE = {
   this.attributes['currentEvent'] = randomEvent;
 
   var introduction = Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
-    + " "
     + Data.GameData.returnRandomWorshipperText()
     + " "
     + randomEvent.intro;
@@ -74,7 +73,7 @@ var EVENTS_STATE = {
 
   // tell a big thing
   var vDictionary = this.attributes['vDict'];
-  var description = " ... ";//". Here are some things about now. ";
+  var description = "";//". Here are some things about now. ";
 
   var firstDescription = true;
   for(var key in vDictionary){
@@ -91,7 +90,7 @@ var EVENTS_STATE = {
       } else {
         description += Data.GameData.returnCurrentAgeSound(this.attributes['currentAge']);
       }
-      description += " ... " + Data.GameData.returnDescription(
+      description += Data.GameData.returnDescription(
          Data.GameData.variableToIndex(key),
         this.attributes['currentAge'],
         value
@@ -99,13 +98,13 @@ var EVENTS_STATE = {
     }
   }
 
-  description += " ... ";
 
   if(this.attributes['currentAge'] >= Data.GameData.maxAges){ // end the game
     this.emit(':tell', responseText
       + " "
       + Data.GameData.AGE_END_SOUND
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+      + "<break time=\"1s\"/> "
       + description
       + " You survey all that you have done. And you see. That it is good. The end."
     );
@@ -118,6 +117,7 @@ var EVENTS_STATE = {
       + " "
       + Data.GameData.AGE_END_SOUND
       + Data.GameData.returnCurrentAgeDescription(this.attributes['currentAge'])
+      + "<break time=\"1s\"/> "
       + description
       + randomEvent.intro,
        randomEvent.intro);
@@ -132,22 +132,18 @@ var EVENTS_STATE = {
 'SessionEndedRequest' : function() {
     console.log('Session ended with reason: ' + this.event.request.reason);
 },
-'AMAZON.StopIntent' : function() {
-    this.response.speak('Bye');
-    this.emit(':responseReady');
-},
 'AMAZON.HelpIntent' : function() {
-    this.response.speak("You can try: 'alexa, hello world' or 'alexa, ask hello world my" +
-        " name is awesome Aaron'");
-    this.emit(':responseReady');
+  this.emit(':ask', "Answer the prompt or say 'stop' to exit the game");
+},
+'AMAZON.StopIntent' : function() {
+    this.emit(':tell', 'You survey all that you have done. And you see. That it is good. ');
 },
 'AMAZON.CancelIntent' : function() {
-    this.response.speak('Bye');
-    this.emit(':responseReady');
+    this.emit(':tell', 'You survey all that you have done. And you see. That it is good. ');
 },
 'Unhandled' : function() {
   //TBD behavior?
-    this.emit(":ask","Sorry, Unhandled");
+    this.emit(":tell","Sorry, I couldn't understand");
 }
 };
 

@@ -28,7 +28,6 @@ const newSessionHandlers = {
         //     this.attributes['currentEventMessage'] = '';
         // }
 
-
         this.handler.state = Data.GameConst.States.SETUP;
         this.emit(':ask', 'Welcome to The Hands of an Angry God. You are an ancient deity who sleeps in a holy temple. You awaken once every one thousand years. A single worshipper earns the right to ask you an important question. Make sure your answer, is <prosody rate="slow">a <emphasis>good</emphasis></prosody> one. Are you ready to play?', 'Are you ready to play?')
     }

@@ -27,7 +27,7 @@ var GameData = {
 
     this.BELL_SOUND = "<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/bell.mp3\'/>";
     this.AGE_END_SOUND = "";//"<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/Age_End.mp3\'/>";
-    this.FOOTSTEPS_SOUND = "";//"<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/supplicant.mp3\'/>";
+    this.FOOTSTEPS_SOUND = "<break time=\"1s\"/> ";//"<audio src=\'https://s3.amazonaws.com/thehandsofanangrygodsound/supplicant.mp3\'/>";
   },
 
   randomDescription: function(){
@@ -133,15 +133,15 @@ var GameData = {
         return "It is the age of stone.";
     }
     else if(age==2){
-        return "One thousand years pass. It is the age of noble castles.";
+        return "<emphasis level=\"moderate\"> one thousand years pass. </emphasis> <break time=\"1s\"/> It is the age of noble castles.";
     }else if(age==3){
-        return "One thousand years pass. It is the age of steam.";
+        return "<emphasis level=\"moderate\"> one thousand years pass. </emphasis> <break time=\"1s\"/> It is the age of steam.";
     }else if(age==4){
-        return "One thousand years pass. It is the age of skyscrapers.";
+        return "<emphasis level=\"moderate\"> one thousand years pass. </emphasis> <break time=\"1s\"/> It is the age of skyscrapers.";
     }else if(age==5){
-        return "One thousand years pass. It is the age... of cyber.";
+        return "<emphasis level=\"moderate\"> one thousand years pass. </emphasis> <break time=\"1s\"/> It is the age ... of cyber.";
     }else if(age==6){
-        return "One thousand years pass. It is the age of interstellar flight.";
+        return "<emphasis level=\"moderate\"> one thousand years pass. </emphasis> <break time=\"1s\"/> It is the age of interstellar flight.";
     }else{
         return " . This is an unrecognized age... It's age " + age + " . ";
     }

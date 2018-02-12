@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hands of an angry god",
+            "invocationName": "the hands of an angry god",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",

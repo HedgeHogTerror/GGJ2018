@@ -245,7 +245,7 @@ var q = [
     {
         "eventname": "Knuckles 1",
         "variable": "knuckles",
-        "intro": "Awesome One, my sister cracks her knuckles, and it fills me with disgust. Are knuckles meant to cracked, or uncracked?",
+        "intro": "Awesome One, my sister cracks her knuckles, and it fills me with disgust. Are knuckles meant to be cracked, or uncracked?",
         "iplus": "cracked",
         "iminus": "uncracked",
         "resultplus": "The worshiper forcefully presses each finger to her palm until it pops. Her face contorts in pain.",
