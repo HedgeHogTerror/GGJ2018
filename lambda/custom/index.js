@@ -6,6 +6,7 @@ const Alexa = require("alexa-sdk"),
 
 const Data = require('./gamedata');
 
+
 var APP_ID = undefined;
 
 exports.handler = function(event, context, callback) {
@@ -13,6 +14,7 @@ exports.handler = function(event, context, callback) {
     context.GameData = Data.GameData;
     context.GameConst = Data.GameConst;
     const alexa = Alexa.handler(event, context);
+    alexa.dynamoDBTableName = 'AngryGodsTable'; // That's it!
     // alexa.dynamoDBTableName = '';//TBD
     // Data.GameData.reload(); dont think we can attach random props...
     alexa.registerHandlers(newSessionHandlers,setupHandlers,gameHandlers,endingHandlers);
