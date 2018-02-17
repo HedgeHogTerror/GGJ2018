@@ -14,9 +14,12 @@ exports.handler = function(event, context, callback) {
     context.GameData = Data.GameData;
     context.GameConst = Data.GameConst;
     const alexa = Alexa.handler(event, context);
-    alexa.dynamoDBTableName = 'AngryGodsTable'; // That's it!
+    // alexa.dynamoDBTableName = 'AngryGodsTable'; // That's it!
     // alexa.dynamoDBTableName = '';//TBD
     // Data.GameData.reload(); dont think we can attach random props...
+    console.log(context)
+    // if( Object.keyscontext.sessionAttributes).length > 0 )
+
     alexa.registerHandlers(newSessionHandlers,setupHandlers,gameHandlers,endingHandlers);
     alexa.execute();
 };
@@ -25,12 +28,14 @@ exports.handler = function(event, context, callback) {
 const newSessionHandlers = {
     'NewSession': function() {
 
-        // if(Object.keys(this.attributes).length === 0) { // alexa.attributes can be used to save data between sessions
-        //     this.attributes['currentEvent'] = 0;
-        //     this.attributes['currentEventMessage'] = '';
-        // }
+        if(Object.keys(this.attributes).length > 0) { // alexa.attributes can be used to save data between sessions
+            this.attributes = [];
+        }
 
         this.handler.state = Data.GameConst.States.SETUP;
         this.emit(':ask', 'Welcome to The Hands of an Angry God. You are an ancient deity who sleeps in a holy temple. You awaken once every one thousand years. A single worshipper earns the right to ask you an important question. Make sure your answer, is <prosody rate="slow">a <emphasis>good</emphasis></prosody> one. Are you ready to play?', 'Are you ready to play?')
+    },
+    'SessionEndedRequest' : function() {
+        console.log('Session ended with reason: ' + this.event.request.reason);
     }
 };

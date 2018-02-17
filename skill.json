@@ -3,28 +3,51 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "In this interactive adventure game, you take on the role of a deity who must answer the questions of your followers. Your answers will shape civilization...",
           "examplePhrases": [
-            "Alexa open god",
-            "Alexa tell god yes",
-            "Alexa tell god no"
+            "Alexa open the hands of an angry god",
+            "Alexa, start the hands of an angry god",
+            "Alexa, launch the hands of an angry god"
           ],
-          "name": "god",
-          "description": "Sample Full Description"
+          "keywords": [
+            "game",
+            "adventure",
+            "god",
+            "hands",
+            "angry"
+          ],
+          "name": "The Hands of an Angry God",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/43df/5008ac024da6420a8e56cf3e35f1211c/APP_ICON?versionId=LS8kTLFeb0sd3mv3W4GOSST6Y_NUSEu0&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1518992897&Signature=3u1X7CYXw%2FhKRoGmMkg0H%2BexfzA%3D",
+          "description": "You are an ancient deity who sleeps in a holy temple. You awaken once every one thousand years. A single worshiper earns the right to ask you an important question. Make sure your answer is a good one!",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/aa55/58b1851539844d0dbd873236f55d1801/APP_ICON_LARGE?versionId=eQvX_EUhJJpT5yGuOU3R0yA5tF1c54py&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1518992897&Signature=dCTOoziwCzfhmX%2FiXmvp0ctm8eQ%3D"
         }
       },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "EDUCATION_AND_REFERENCE",
-      "distributionCountries": []
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Open the game by saying \"Alexa, Open The Hands of an Angry God\"\n\nIn every age, a follower will ask you a question like \"Is it GOOD for me to have a gerbil as a pet, or is it BAD?\" You can answer in any way that contains the key phrase such as \"Gerbils are GOOD\", \"GOOD\", or \"I think gerbils are BAD\", for example. The effects of your pronouncements will affect civilization in the coming millennia. Use your wise decisions to guide your civilization to success, or, more likely, chaos.",
+      "category": "GAMES",
+      "distributionCountries": [
+        "US",
+        "UM",
+        "GB",
+        "AU",
+        "NZ",
+        "CA"
+      ]
     },
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
+          "uri": "arn:aws:lambda:us-east-1:502434506495:function:ask-custom-god-marcuscordale"
         }
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
   }
 }
